@@ -15,6 +15,11 @@
 		AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */; };
 		AF2C0F141BE7CD7300AACFA6 /* BeaconCityGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F131BE7CD7300AACFA6 /* BeaconCityGameTests.m */; };
 		AF2C0F1F1BE7CD7300AACFA6 /* BeaconCityGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */; };
+		AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */; };
+		AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */; };
+		AF2C0F311BE7D30900AACFA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */; };
+		AF2C0F331BE7D31600AACFA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F321BE7D31600AACFA6 /* UIKit.framework */; };
+		AF2C0F351BE7D32000AACFA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F341BE7D32000AACFA6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		AF2C0F1A1BE7CD7300AACFA6 /* BeaconCityGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconCityGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconCityGameUITests.m; sourceTree = "<group>"; };
 		AF2C0F201BE7CD7300AACFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF2C0F321BE7D31600AACFA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF2C0F341BE7D32000AACFA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2C0F351BE7D32000AACFA6 /* Foundation.framework in Frameworks */,
+				AF2C0F331BE7D31600AACFA6 /* UIKit.framework in Frameworks */,
+				AF2C0F311BE7D30900AACFA6 /* CoreGraphics.framework in Frameworks */,
+				AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */,
+				AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,11 @@
 		AF2C0EED1BE7CD7300AACFA6 = {
 			isa = PBXGroup;
 			children = (
+				AF2C0F341BE7D32000AACFA6 /* Foundation.framework */,
+				AF2C0F321BE7D31600AACFA6 /* UIKit.framework */,
+				AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */,
+				AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */,
+				AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */,
 				AF2C0EF81BE7CD7300AACFA6 /* BeaconCityGame */,
 				AF2C0F121BE7CD7300AACFA6 /* BeaconCityGameTests */,
 				AF2C0F1D1BE7CD7300AACFA6 /* BeaconCityGameUITests */,
@@ -202,6 +222,7 @@
 		AF2C0EEE1BE7CD7300AACFA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BCG;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Bartosz Stelmaszuk";
 				TargetAttributes = {
