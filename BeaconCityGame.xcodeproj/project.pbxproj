@@ -20,6 +20,8 @@
 		AF2C0F311BE7D30900AACFA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */; };
 		AF2C0F331BE7D31600AACFA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F321BE7D31600AACFA6 /* UIKit.framework */; };
 		AF2C0F351BE7D32000AACFA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F341BE7D32000AACFA6 /* Foundation.framework */; };
+		AF2C0F391BE7D47500AACFA6 /* BCGTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F381BE7D47500AACFA6 /* BCGTrackingViewController.m */; };
+		AF2C0F3C1BE7D48200AACFA6 /* BCGConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F3B1BE7D48200AACFA6 /* BCGConfigViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AF2C0F321BE7D31600AACFA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF2C0F341BE7D32000AACFA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF2C0F371BE7D47500AACFA6 /* BCGTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTrackingViewController.h; sourceTree = "<group>"; };
+		AF2C0F381BE7D47500AACFA6 /* BCGTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTrackingViewController.m; sourceTree = "<group>"; };
+		AF2C0F3A1BE7D48200AACFA6 /* BCGConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGConfigViewController.h; sourceTree = "<group>"; };
+		AF2C0F3B1BE7D48200AACFA6 /* BCGConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGConfigViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,15 +102,11 @@
 		AF2C0EED1BE7CD7300AACFA6 = {
 			isa = PBXGroup;
 			children = (
-				AF2C0F341BE7D32000AACFA6 /* Foundation.framework */,
-				AF2C0F321BE7D31600AACFA6 /* UIKit.framework */,
-				AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */,
-				AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */,
-				AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */,
 				AF2C0EF81BE7CD7300AACFA6 /* BeaconCityGame */,
 				AF2C0F121BE7CD7300AACFA6 /* BeaconCityGameTests */,
 				AF2C0F1D1BE7CD7300AACFA6 /* BeaconCityGameUITests */,
 				AF2C0EF71BE7CD7300AACFA6 /* Products */,
+				AF2C0F361BE7D34700AACFA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +128,10 @@
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
 				AF2C0F021BE7CD7300AACFA6 /* Main.storyboard */,
+				AF2C0F371BE7D47500AACFA6 /* BCGTrackingViewController.h */,
+				AF2C0F381BE7D47500AACFA6 /* BCGTrackingViewController.m */,
+				AF2C0F3A1BE7D48200AACFA6 /* BCGConfigViewController.h */,
+				AF2C0F3B1BE7D48200AACFA6 /* BCGConfigViewController.m */,
 				AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */,
 				AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */,
 				AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */,
@@ -158,6 +164,18 @@
 				AF2C0F201BE7CD7300AACFA6 /* Info.plist */,
 			);
 			path = BeaconCityGameUITests;
+			sourceTree = "<group>";
+		};
+		AF2C0F361BE7D34700AACFA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C0F341BE7D32000AACFA6 /* Foundation.framework */,
+				AF2C0F321BE7D31600AACFA6 /* UIKit.framework */,
+				AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */,
+				AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */,
+				AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2C0F391BE7D47500AACFA6 /* BCGTrackingViewController.m in Sources */,
+				AF2C0F3C1BE7D48200AACFA6 /* BCGConfigViewController.m in Sources */,
 				AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */,
 				AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */,
 				AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */,
