@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D5814AC672AB413353C4EF /* libPods-BeaconCityGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */; };
 		AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0EFA1BE7CD7300AACFA6 /* main.m */; };
 		AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */; };
 		AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F001BE7CD7300AACFA6 /* ViewController.m */; };
@@ -17,9 +18,6 @@
 		AF2C0F1F1BE7CD7300AACFA6 /* BeaconCityGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */; };
 		AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */; };
 		AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */; };
-		AF2C0F311BE7D30900AACFA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */; };
-		AF2C0F331BE7D31600AACFA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F321BE7D31600AACFA6 /* UIKit.framework */; };
-		AF2C0F351BE7D32000AACFA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F341BE7D32000AACFA6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeaconCityGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.release.xcconfig"; sourceTree = "<group>"; };
+		AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.debug.xcconfig"; sourceTree = "<group>"; };
 		AF2C0EF61BE7CD7300AACFA6 /* BeaconCityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconCityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C0EFA1BE7CD7300AACFA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF2C0EFC1BE7CD7300AACFA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,11 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2C0F351BE7D32000AACFA6 /* Foundation.framework in Frameworks */,
-				AF2C0F331BE7D31600AACFA6 /* UIKit.framework in Frameworks */,
-				AF2C0F311BE7D30900AACFA6 /* CoreGraphics.framework in Frameworks */,
 				AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */,
 				AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */,
+				06D5814AC672AB413353C4EF /* libPods-BeaconCityGame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30FB5B12D5DB57DED90DAB69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */,
+				4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF2C0EED1BE7CD7300AACFA6 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +109,7 @@
 				AF2C0F1D1BE7CD7300AACFA6 /* BeaconCityGameUITests */,
 				AF2C0EF71BE7CD7300AACFA6 /* Products */,
 				AF2C0F361BE7D34700AACFA6 /* Frameworks */,
+				30FB5B12D5DB57DED90DAB69 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +173,7 @@
 				AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */,
 				AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */,
 				AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */,
+				20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF2C0F231BE7CD7300AACFA6 /* Build configuration list for PBXNativeTarget "BeaconCityGame" */;
 			buildPhases = (
+				20C410161C0D1B0D7426950E /* Check Pods Manifest.lock */,
 				AF2C0EF21BE7CD7300AACFA6 /* Sources */,
 				AF2C0EF31BE7CD7300AACFA6 /* Frameworks */,
 				AF2C0EF41BE7CD7300AACFA6 /* Resources */,
+				59691155793E79E1DCC46F88 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +306,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20C410161C0D1B0D7426950E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59691155793E79E1DCC46F88 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF2C0EF21BE7CD7300AACFA6 /* Sources */ = {
@@ -439,6 +484,7 @@
 		};
 		AF2C0F241BE7CD7300AACFA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -454,6 +500,7 @@
 		};
 		AF2C0F251BE7CD7300AACFA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
