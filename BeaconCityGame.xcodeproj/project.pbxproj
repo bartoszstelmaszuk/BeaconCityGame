@@ -20,8 +20,6 @@
 		AF2C0F311BE7D30900AACFA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */; };
 		AF2C0F331BE7D31600AACFA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F321BE7D31600AACFA6 /* UIKit.framework */; };
 		AF2C0F351BE7D32000AACFA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F341BE7D32000AACFA6 /* Foundation.framework */; };
-		AF2C0F391BE7D47500AACFA6 /* BCGTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F381BE7D47500AACFA6 /* BCGTrackingViewController.m */; };
-		AF2C0F3C1BE7D48200AACFA6 /* BCGConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F3B1BE7D48200AACFA6 /* BCGConfigViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +61,6 @@
 		AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AF2C0F321BE7D31600AACFA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF2C0F341BE7D32000AACFA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AF2C0F371BE7D47500AACFA6 /* BCGTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTrackingViewController.h; sourceTree = "<group>"; };
-		AF2C0F381BE7D47500AACFA6 /* BCGTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTrackingViewController.m; sourceTree = "<group>"; };
-		AF2C0F3A1BE7D48200AACFA6 /* BCGConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGConfigViewController.h; sourceTree = "<group>"; };
-		AF2C0F3B1BE7D48200AACFA6 /* BCGConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGConfigViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +122,6 @@
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
 				AF2C0F021BE7CD7300AACFA6 /* Main.storyboard */,
-				AF2C0F371BE7D47500AACFA6 /* BCGTrackingViewController.h */,
-				AF2C0F381BE7D47500AACFA6 /* BCGTrackingViewController.m */,
-				AF2C0F3A1BE7D48200AACFA6 /* BCGConfigViewController.h */,
-				AF2C0F3B1BE7D48200AACFA6 /* BCGConfigViewController.m */,
 				AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */,
 				AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */,
 				AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */,
@@ -246,6 +236,7 @@
 				TargetAttributes = {
 					AF2C0EF51BE7CD7300AACFA6 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7SQ8TQ463G;
 					};
 					AF2C0F0E1BE7CD7300AACFA6 = {
 						CreatedOnToolsVersion = 7.1;
@@ -309,8 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2C0F391BE7D47500AACFA6 /* BCGTrackingViewController.m in Sources */,
-				AF2C0F3C1BE7D48200AACFA6 /* BCGConfigViewController.m in Sources */,
 				AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */,
 				AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */,
 				AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */,
@@ -452,10 +441,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconCityGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = stelmaszuk.BeaconCityGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,10 +456,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconCityGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = stelmaszuk.BeaconCityGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -537,6 +534,7 @@
 				AF2C0F251BE7CD7300AACFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF2C0F261BE7CD7300AACFA6 /* Build configuration list for PBXNativeTarget "BeaconCityGameTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +543,7 @@
 				AF2C0F281BE7CD7300AACFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF2C0F291BE7CD7300AACFA6 /* Build configuration list for PBXNativeTarget "BeaconCityGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +552,7 @@
 				AF2C0F2B1BE7CD7300AACFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
