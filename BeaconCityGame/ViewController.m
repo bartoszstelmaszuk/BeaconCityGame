@@ -16,7 +16,6 @@
 @property (strong, nonatomic) CLBeacon *beacon;
 @property (strong, nonatomic) ESTBeaconManager *beaconManager;
 @property (strong, nonatomic) CLBeaconRegion *beaconRegion;
-@property (weak, nonatomic) IBOutlet UILabel *beaconProximityLabel;
 
 @end
 
@@ -33,7 +32,6 @@
                                                                 major:43355
                                                                 minor:9819
                                                            identifier:@"MyIdentifier"];
-    
     self.beaconRegion.notifyOnEntry = YES;
     self.beaconRegion.notifyOnExit = YES;
     
@@ -76,7 +74,6 @@
 {
     if (beacons.count > 0) {
         CLBeacon *firstBeacon = [beacons firstObject];
-        self.beaconProximityLabel.text = [self textForProximity:firstBeacon.proximity];
     }
 }
 
@@ -88,11 +85,9 @@
             return @"Far";
         case CLProximityImmediate:
             NSLog(@"Immediate");
-            self.beaconProximityLabel.textColor = [UIColor purpleColor];
             return @"Immediate";
         case CLProximityNear:
             NSLog(@"Near");
-            self.beaconProximityLabel.textColor = [UIColor greenColor];
             return @"Near";
         case CLProximityUnknown:
             NSLog(@"Unknown");

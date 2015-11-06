@@ -18,6 +18,9 @@
 		AF2C0F1F1BE7CD7300AACFA6 /* BeaconCityGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */; };
 		AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */; };
 		AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */; };
+		AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */; };
+		AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */; };
+		AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,11 @@
 		AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AF2C0F321BE7D31600AACFA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF2C0F341BE7D32000AACFA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF5F76121BED07B800B45635 /* BCGBeaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGBeaconTableViewCell.h; sourceTree = "<group>"; };
+		AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGBeaconTableViewCell.m; sourceTree = "<group>"; };
+		AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGBeaconTableViewCell.xib; sourceTree = "<group>"; };
+		AFED11AF1BED0C43009B3EC8 /* BCGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewController.h; sourceTree = "<group>"; };
+		AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				AF2C0EFC1BE7CD7300AACFA6 /* AppDelegate.h */,
+				AFED11AF1BED0C43009B3EC8 /* BCGTableViewController.h */,
+				AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */,
 				AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */,
+				AF5F76121BED07B800B45635 /* BCGBeaconTableViewCell.h */,
+				AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */,
+				AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */,
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
 				AF2C0F021BE7CD7300AACFA6 /* Main.storyboard */,
@@ -287,6 +300,7 @@
 			files = (
 				AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */,
 				AF2C0F061BE7CD7300AACFA6 /* Assets.xcassets in Resources */,
+				AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */,
 				AF2C0F041BE7CD7300AACFA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +360,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */,
+				AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */,
 				AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */,
+				AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */,
 				AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
