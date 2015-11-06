@@ -44,6 +44,8 @@
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
     
     [self.beaconManager requestAlwaysAuthorization];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BCGBeaconTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGBeaconTableViewCell"];
 }
 
 - (void)beaconManager:(id)manager monitoringDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
@@ -92,7 +94,7 @@
         case CLProximityNear:
             return @"Near";
         case CLProximityUnknown:
-            return @"Unknown";   
+            return @"Unknown";
     }
 }
 
@@ -117,7 +119,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView registerNib:[UINib nibWithNibName:@"BCGBeaconTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGBeaconTableViewCell"];
     BCGBeaconTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGBeaconTableViewCell"];
 
     CLBeacon *beacon = [self.beacons objectAtIndex:indexPath.row];
