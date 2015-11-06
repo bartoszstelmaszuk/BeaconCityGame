@@ -35,8 +35,6 @@
     self.beaconManager.delegate = self;
     
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                major:43355
-                                                                minor:9819
                                                            identifier:@"MyIdentifier"];
     self.beaconRegion.notifyOnEntry = YES;
     self.beaconRegion.notifyOnExit = YES;
@@ -88,18 +86,13 @@
 {
     switch (proximity) {
         case CLProximityFar:
-            NSLog(@"Far");
             return @"Far";
         case CLProximityImmediate:
-            NSLog(@"Immediate");
             return @"Immediate";
         case CLProximityNear:
-            NSLog(@"Near");
             return @"Near";
         case CLProximityUnknown:
-            NSLog(@"Unknown");
-            return @"Unknown";
-            
+            return @"Unknown";   
     }
 }
 
@@ -127,7 +120,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"BCGBeaconTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGBeaconTableViewCell"];
     BCGBeaconTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGBeaconTableViewCell"];
 
-    CLBeacon *beacon = [self.beacons firstObject];
+    CLBeacon *beacon = [self.beacons objectAtIndex:indexPath.row];
     
     cell.proximityLabel.text = [self textForProximity:beacon.proximity];
     cell.majorLabel.text = [NSString stringWithFormat:@"%@", beacon.major ];
