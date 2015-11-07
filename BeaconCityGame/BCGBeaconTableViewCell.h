@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BCGBeaconTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *uuidLabel;
 @property (weak, nonatomic) IBOutlet UILabel *majorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minorLabel;
