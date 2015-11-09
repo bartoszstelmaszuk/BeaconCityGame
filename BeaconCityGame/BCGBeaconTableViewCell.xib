@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veb-kl-C8Q">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veb-kl-C8Q">
                         <rect key="frame" x="4" y="4" width="183" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="183" id="ELv-C1-EJj"/>
@@ -76,8 +76,8 @@
             <connections>
                 <outlet property="majorLabel" destination="pDt-Zo-fYl" id="hDK-Fh-3zz"/>
                 <outlet property="minorLabel" destination="HRH-ON-3TL" id="obk-On-p01"/>
+                <outlet property="nameLabel" destination="veb-kl-C8Q" id="2uE-Rj-4A4"/>
                 <outlet property="proximityLabel" destination="ZYf-nL-5vd" id="Ypv-4H-2kD"/>
-                <outlet property="uuidLabel" destination="veb-kl-C8Q" id="IgA-s5-Ug9"/>
             </connections>
         </tableViewCell>
     </objects>

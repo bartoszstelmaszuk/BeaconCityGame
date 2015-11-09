@@ -118,9 +118,8 @@
     CLBeacon *beacon = [self.beacons objectAtIndex:indexPath.row];
     
     cell.proximityLabel.text = [self textForProximity:beacon.proximity];
-    cell.majorLabel.text = [NSString stringWithFormat:@"%@", beacon.major ];
+    cell.majorLabel.text = [NSString stringWithFormat:@"%@", beacon.major];
     cell.minorLabel.text = [NSString stringWithFormat:@"%@", beacon.minor];
-    cell.uuidLabel.text = beacon.proximityUUID.UUIDString;
     
     return cell;
 }
