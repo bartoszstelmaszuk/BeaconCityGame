@@ -1,43 +1,28 @@
 //
-//  BCGTableViewController.m
+//  BCGCluesTableViewController.m
 //  BeaconCityGame
 //
-//  Created by Bartosz Stelmaszuk on 06/11/15.
+//  Created by Bartosz Stelmaszuk on 09/11/15.
 //  Copyright © 2015 Bartosz Stelmaszuk. All rights reserved.
 //
 
-#import "BCGTableViewController.h"
-#import "BCGBeaconTableViewCell.h"
-#import "BCGTableViewDataSource.h"
-#import "BCGClueEditionTableViewController.h"
-#import <ESTBeaconManager.h>
+#import "BCGCluesTableViewController.h"
+#import "BCGCluesManager.h"
+#import "BCGClueTableViewCell.h"
 
-@interface BCGTableViewController () <BCGTableViewDataSourceDelegate>
+@interface BCGCluesTableViewController ()
 
-@property (strong, nonatomic) BCGTableViewDataSource *dataSource;
-@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @end
 
-@implementation BCGTableViewController
+@implementation BCGCluesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataSource = [BCGTableViewDataSource new];
-    self.dataSource.delegate = self;
-    
-    self.tableView.dataSource = self.dataSource;
-    self.tableView.delegate = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44;
-    self.selectedIndexPath = [NSIndexPath new];
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"BCGBeaconTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGBeaconTableViewCell"];
-}
-
-- (void)reloadTableView
-{
-    [self.tableView reloadData];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BCGClueTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGClueTableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,15 +30,37 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    self.selectedIndexPath = indexPath;
-    [self performSegueWithIdentifier:@"BeaconSelection" sender:self];
-}
 - (IBAction)backTouchButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[BCGCluesManager sharedManager] numberOfClues];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BCGClueTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGClueTableViewCell"];
+    
+    BCGClue *clue = [[BCGCluesManager sharedManager] clueAtIndex:indexPath.row];
+    
+    cell.majorLabel.text = [NSString stringWithFormat:@"%@", clue.beacon.major];
+    cell.minorLabel.text = [NSString stringWithFormat:@"%@", clue.beacon.minor];
+    cell.clueDescriptionLabel.text = clue.clueDescription;
+    
+    return cell;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -89,19 +96,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"BeaconSelection"])
-    {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        BCGClueEditionTableViewController *desViewController = segue.destinationViewController;
-        desViewController.beacon = [self.dataSource getBeaconAtIndexPath:indexPath];
-    }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end

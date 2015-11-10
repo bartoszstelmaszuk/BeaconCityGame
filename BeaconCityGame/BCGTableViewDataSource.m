@@ -10,7 +10,7 @@
 #import "BCGBeaconTableViewCell.h"
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import <ESTBeaconManager.h>
+#import "BCGCluesManager.h"
 
 @interface BCGTableViewDataSource () <ESTBeaconManagerDelegate>
 
@@ -78,8 +78,14 @@
 
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region
 {
+    NSMutableArray *temp = [NSMutableArray array];
     if (beacons.count > 0) {
-        self.beacons = beacons;
+        for (CLBeacon *beacon in beacons) {
+            if (![[BCGCluesManager sharedManager] containsBeacon:beacon]) {
+                [temp addObject:beacon];
+            }
+        }
+        self.beacons = temp;
         [self.delegate reloadTableView];
     }
 }
@@ -124,5 +130,9 @@
     return cell;
 }
 
+- (CLBeacon *)getBeaconAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.beacons objectAtIndex:indexPath.row];
+}
 
 @end

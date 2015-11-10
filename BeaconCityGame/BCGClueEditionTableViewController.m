@@ -7,14 +7,17 @@
 //
 
 #import "BCGClueEditionTableViewController.h"
+#import "BCGClue.h"
+#import "BCGCluesManager.h"
 
 @interface BCGClueEditionTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
-@property (weak, nonatomic) IBOutlet UILabel *clueNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *majorLabel;
 @property (weak, nonatomic) IBOutlet UITextField *clueDescription;
+
+@property (assign, nonatomic, getter = isClueDescriptionFieldValid) BOOL clueDescriptionFieldValid;
 
 @end
 
@@ -23,20 +26,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.saveButton.enabled = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.majorLabel.text = [NSString stringWithFormat:@"%@", self.beacon.major];
+    self.minorLabel.text = [NSString stringWithFormat:@"%@", self.beacon.minor];
+    
+    [self.clueDescription addTarget:self action:@selector(clueDescriptionTextFieldChanged:) forControlEvents:UIControlEventEditingChanged];
 }
+
+//- (void)setBeacon:(CLBeacon *)beacon
+//{
+//    self.beacon = beacon;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)clueDescriptionTextFieldChanged:(UITextField *)textField {
+    if (textField.text.length > 0) {
+        self.clueDescriptionFieldValid = YES;
+    } else {
+        self.clueDescriptionFieldValid = NO;
+    }
+    
+    self.saveButton.enabled = self.isClueDescriptionFieldValid;
+}
+
 - (IBAction)saveTouchButton:(id)sender
 {
     NSLog(@"Saved");
+    BCGClue *clue = [[BCGClue alloc] initWithBeacon:self.beacon clueDescription:self.clueDescription.text];
+    
+    [[BCGCluesManager sharedManager] addNextClue:clue];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)cancelTouchButton:(id)sender
@@ -46,15 +70,15 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return 1;
+//}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 3;
-}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return 3;
+//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

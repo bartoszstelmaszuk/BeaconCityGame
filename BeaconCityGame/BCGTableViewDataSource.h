@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ESTBeaconManager.h>
 
 @protocol BCGTableViewDataSourceDelegate
 
@@ -17,5 +18,7 @@
 @interface BCGTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property (nonatomic, strong) id<BCGTableViewDataSourceDelegate> delegate;
+
+- (CLBeacon *)getBeaconAtIndexPath:(NSIndexPath *) indexPath;
 
 @end

@@ -23,6 +23,11 @@
 		AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */; };
 		AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */; };
 		AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */; };
+		AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F2C1BF14D760093A03E /* BCGClue.m */; };
+		AFFD3F301BF1547D0093A03E /* BCGCluesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F2F1BF1547D0093A03E /* BCGCluesManager.m */; };
+		AFFD3F341BF158B40093A03E /* BCGCluesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */; };
+		AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */; };
+		AFFD3F391BF1595F0093A03E /* BCGClueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,15 @@
 		AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGBeaconTableViewCell.xib; sourceTree = "<group>"; };
 		AFED11AF1BED0C43009B3EC8 /* BCGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewController.h; sourceTree = "<group>"; };
 		AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewController.m; sourceTree = "<group>"; };
+		AFFD3F2B1BF14D760093A03E /* BCGClue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGClue.h; sourceTree = "<group>"; };
+		AFFD3F2C1BF14D760093A03E /* BCGClue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGClue.m; sourceTree = "<group>"; };
+		AFFD3F2E1BF1547D0093A03E /* BCGCluesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGCluesManager.h; sourceTree = "<group>"; };
+		AFFD3F2F1BF1547D0093A03E /* BCGCluesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGCluesManager.m; sourceTree = "<group>"; };
+		AFFD3F321BF158B40093A03E /* BCGCluesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGCluesTableViewController.h; sourceTree = "<group>"; };
+		AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGCluesTableViewController.m; sourceTree = "<group>"; };
+		AFFD3F351BF1595F0093A03E /* BCGClueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGClueTableViewCell.h; sourceTree = "<group>"; };
+		AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGClueTableViewCell.m; sourceTree = "<group>"; };
+		AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGClueTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +136,8 @@
 				AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */,
 				AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */,
 				AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */,
-				AF5F76121BED07B800B45635 /* BCGBeaconTableViewCell.h */,
-				AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */,
-				AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */,
+				AFFD3F3B1BF168C30093A03E /* BeaconEditionIntoClue */,
+				AFFD3F2A1BF14D460093A03E /* BeaconCell */,
 			);
 			name = BeaconTableView;
 			sourceTree = "<group>";
@@ -156,8 +169,8 @@
 			children = (
 				AF2C0EFC1BE7CD7300AACFA6 /* AppDelegate.h */,
 				AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */,
-				AF05DCEA1BEFB8A100580752 /* BCGClueEditionTableViewController.h */,
-				AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */,
+				AFFD3F3A1BF159660093A03E /* ClueTableView */,
+				AFFD3F311BF154850093A03E /* Clues */,
 				AF05DCE61BED77F700580752 /* BeaconTableView */,
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
@@ -207,6 +220,48 @@
 				20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFFD3F2A1BF14D460093A03E /* BeaconCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F76121BED07B800B45635 /* BCGBeaconTableViewCell.h */,
+				AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */,
+				AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */,
+			);
+			name = BeaconCell;
+			sourceTree = "<group>";
+		};
+		AFFD3F311BF154850093A03E /* Clues */ = {
+			isa = PBXGroup;
+			children = (
+				AFFD3F2B1BF14D760093A03E /* BCGClue.h */,
+				AFFD3F2C1BF14D760093A03E /* BCGClue.m */,
+				AFFD3F2E1BF1547D0093A03E /* BCGCluesManager.h */,
+				AFFD3F2F1BF1547D0093A03E /* BCGCluesManager.m */,
+			);
+			name = Clues;
+			sourceTree = "<group>";
+		};
+		AFFD3F3A1BF159660093A03E /* ClueTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AFFD3F321BF158B40093A03E /* BCGCluesTableViewController.h */,
+				AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */,
+				AFFD3F351BF1595F0093A03E /* BCGClueTableViewCell.h */,
+				AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */,
+				AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */,
+			);
+			name = ClueTableView;
+			sourceTree = "<group>";
+		};
+		AFFD3F3B1BF168C30093A03E /* BeaconEditionIntoClue */ = {
+			isa = PBXGroup;
+			children = (
+				AF05DCEA1BEFB8A100580752 /* BCGClueEditionTableViewController.h */,
+				AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */,
+			);
+			name = BeaconEditionIntoClue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +375,7 @@
 				AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */,
 				AF2C0F061BE7CD7300AACFA6 /* Assets.xcassets in Resources */,
 				AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */,
+				AFFD3F391BF1595F0093A03E /* BCGClueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,12 +433,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFD3F301BF1547D0093A03E /* BCGCluesManager.m in Sources */,
 				AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */,
+				AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */,
 				AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */,
 				AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */,
+				AFFD3F341BF158B40093A03E /* BCGCluesTableViewController.m in Sources */,
 				AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */,
 				AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */,
 				AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */,
+				AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */,
 				AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

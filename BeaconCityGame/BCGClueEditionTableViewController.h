@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ESTBeaconManager.h>
 
 @interface BCGClueEditionTableViewController : UITableViewController
+
+@property (nonatomic, strong) CLBeacon *beacon;
 
 @end
