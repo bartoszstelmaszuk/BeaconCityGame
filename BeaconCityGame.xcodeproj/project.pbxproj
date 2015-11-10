@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D5814AC672AB413353C4EF /* libPods-BeaconCityGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */; };
+		AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */; };
+		AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF05DCE71BEFB70500580752 /* Main.storyboard */; };
+		AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */; };
 		AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0EFA1BE7CD7300AACFA6 /* main.m */; };
 		AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */; };
 		AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F001BE7CD7300AACFA6 /* ViewController.m */; };
-		AF2C0F041BE7CD7300AACFA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2C0F021BE7CD7300AACFA6 /* Main.storyboard */; };
 		AF2C0F061BE7CD7300AACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */; };
 		AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */; };
 		AF2C0F141BE7CD7300AACFA6 /* BeaconCityGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F131BE7CD7300AACFA6 /* BeaconCityGameTests.m */; };
 		AF2C0F1F1BE7CD7300AACFA6 /* BeaconCityGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */; };
+		AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */; };
+		AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */; };
+		AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */; };
+		AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */; };
+		AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */; };
+		AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F2C1BF14D760093A03E /* BCGClue.m */; };
+		AFFD3F301BF1547D0093A03E /* BCGCluesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F2F1BF1547D0093A03E /* BCGCluesManager.m */; };
+		AFFD3F341BF158B40093A03E /* BCGCluesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */; };
+		AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */; };
+		AFFD3F391BF1595F0093A03E /* BCGClueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeaconCityGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.release.xcconfig"; sourceTree = "<group>"; };
+		AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.debug.xcconfig"; sourceTree = "<group>"; };
+		AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewDataSource.h; sourceTree = "<group>"; };
+		AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewDataSource.m; sourceTree = "<group>"; };
+		AF05DCE81BEFB70500580752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BeaconCityGame/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF05DCEA1BEFB8A100580752 /* BCGClueEditionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGClueEditionTableViewController.h; sourceTree = "<group>"; };
+		AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGClueEditionTableViewController.m; sourceTree = "<group>"; };
 		AF2C0EF61BE7CD7300AACFA6 /* BeaconCityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconCityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C0EFA1BE7CD7300AACFA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF2C0EFC1BE7CD7300AACFA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AF2C0F001BE7CD7300AACFA6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AF2C0F031BE7CD7300AACFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF2C0F081BE7CD7300AACFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +71,25 @@
 		AF2C0F1A1BE7CD7300AACFA6 /* BeaconCityGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconCityGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconCityGameUITests.m; sourceTree = "<group>"; };
 		AF2C0F201BE7CD7300AACFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF2C0F321BE7D31600AACFA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF2C0F341BE7D32000AACFA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF5F76121BED07B800B45635 /* BCGBeaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGBeaconTableViewCell.h; sourceTree = "<group>"; };
+		AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGBeaconTableViewCell.m; sourceTree = "<group>"; };
+		AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGBeaconTableViewCell.xib; sourceTree = "<group>"; };
+		AFED11AF1BED0C43009B3EC8 /* BCGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewController.h; sourceTree = "<group>"; };
+		AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewController.m; sourceTree = "<group>"; };
+		AFFD3F2B1BF14D760093A03E /* BCGClue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGClue.h; sourceTree = "<group>"; };
+		AFFD3F2C1BF14D760093A03E /* BCGClue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGClue.m; sourceTree = "<group>"; };
+		AFFD3F2E1BF1547D0093A03E /* BCGCluesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGCluesManager.h; sourceTree = "<group>"; };
+		AFFD3F2F1BF1547D0093A03E /* BCGCluesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGCluesManager.m; sourceTree = "<group>"; };
+		AFFD3F321BF158B40093A03E /* BCGCluesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGCluesTableViewController.h; sourceTree = "<group>"; };
+		AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGCluesTableViewController.m; sourceTree = "<group>"; };
+		AFFD3F351BF1595F0093A03E /* BCGClueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGClueTableViewCell.h; sourceTree = "<group>"; };
+		AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGClueTableViewCell.m; sourceTree = "<group>"; };
+		AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGClueTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */,
+				AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */,
+				06D5814AC672AB413353C4EF /* libPods-BeaconCityGame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +120,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30FB5B12D5DB57DED90DAB69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */,
+				4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF05DCE61BED77F700580752 /* BeaconTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AFED11AF1BED0C43009B3EC8 /* BCGTableViewController.h */,
+				AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */,
+				AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */,
+				AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */,
+				AFFD3F3B1BF168C30093A03E /* BeaconEditionIntoClue */,
+				AFFD3F2A1BF14D460093A03E /* BeaconCell */,
+			);
+			name = BeaconTableView;
+			sourceTree = "<group>";
+		};
 		AF2C0EED1BE7CD7300AACFA6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +149,8 @@
 				AF2C0F121BE7CD7300AACFA6 /* BeaconCityGameTests */,
 				AF2C0F1D1BE7CD7300AACFA6 /* BeaconCityGameUITests */,
 				AF2C0EF71BE7CD7300AACFA6 /* Products */,
+				AF2C0F361BE7D34700AACFA6 /* Frameworks */,
+				30FB5B12D5DB57DED90DAB69 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +169,12 @@
 			children = (
 				AF2C0EFC1BE7CD7300AACFA6 /* AppDelegate.h */,
 				AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */,
+				AFFD3F3A1BF159660093A03E /* ClueTableView */,
+				AFFD3F311BF154850093A03E /* Clues */,
+				AF05DCE61BED77F700580752 /* BeaconTableView */,
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
-				AF2C0F021BE7CD7300AACFA6 /* Main.storyboard */,
+				AF05DCE71BEFB70500580752 /* Main.storyboard */,
 				AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */,
 				AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */,
 				AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */,
@@ -140,6 +209,61 @@
 			path = BeaconCityGameUITests;
 			sourceTree = "<group>";
 		};
+		AF2C0F361BE7D34700AACFA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C0F341BE7D32000AACFA6 /* Foundation.framework */,
+				AF2C0F321BE7D31600AACFA6 /* UIKit.framework */,
+				AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */,
+				AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */,
+				AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */,
+				20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFFD3F2A1BF14D460093A03E /* BeaconCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F76121BED07B800B45635 /* BCGBeaconTableViewCell.h */,
+				AF5F76131BED07B800B45635 /* BCGBeaconTableViewCell.m */,
+				AF5F76141BED07B800B45635 /* BCGBeaconTableViewCell.xib */,
+			);
+			name = BeaconCell;
+			sourceTree = "<group>";
+		};
+		AFFD3F311BF154850093A03E /* Clues */ = {
+			isa = PBXGroup;
+			children = (
+				AFFD3F2B1BF14D760093A03E /* BCGClue.h */,
+				AFFD3F2C1BF14D760093A03E /* BCGClue.m */,
+				AFFD3F2E1BF1547D0093A03E /* BCGCluesManager.h */,
+				AFFD3F2F1BF1547D0093A03E /* BCGCluesManager.m */,
+			);
+			name = Clues;
+			sourceTree = "<group>";
+		};
+		AFFD3F3A1BF159660093A03E /* ClueTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AFFD3F321BF158B40093A03E /* BCGCluesTableViewController.h */,
+				AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */,
+				AFFD3F351BF1595F0093A03E /* BCGClueTableViewCell.h */,
+				AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */,
+				AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */,
+			);
+			name = ClueTableView;
+			sourceTree = "<group>";
+		};
+		AFFD3F3B1BF168C30093A03E /* BeaconEditionIntoClue */ = {
+			isa = PBXGroup;
+			children = (
+				AF05DCEA1BEFB8A100580752 /* BCGClueEditionTableViewController.h */,
+				AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */,
+			);
+			name = BeaconEditionIntoClue;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF2C0F231BE7CD7300AACFA6 /* Build configuration list for PBXNativeTarget "BeaconCityGame" */;
 			buildPhases = (
+				20C410161C0D1B0D7426950E /* Check Pods Manifest.lock */,
 				AF2C0EF21BE7CD7300AACFA6 /* Sources */,
 				AF2C0EF31BE7CD7300AACFA6 /* Frameworks */,
 				AF2C0EF41BE7CD7300AACFA6 /* Resources */,
+				59691155793E79E1DCC46F88 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,11 +328,13 @@
 		AF2C0EEE1BE7CD7300AACFA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BCG;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Bartosz Stelmaszuk";
 				TargetAttributes = {
 					AF2C0EF51BE7CD7300AACFA6 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7SQ8TQ463G;
 					};
 					AF2C0F0E1BE7CD7300AACFA6 = {
 						CreatedOnToolsVersion = 7.1;
@@ -243,9 +371,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */,
 				AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */,
 				AF2C0F061BE7CD7300AACFA6 /* Assets.xcassets in Resources */,
-				AF2C0F041BE7CD7300AACFA6 /* Main.storyboard in Resources */,
+				AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */,
+				AFFD3F391BF1595F0093A03E /* BCGClueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +395,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20C410161C0D1B0D7426950E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59691155793E79E1DCC46F88 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF2C0EF21BE7CD7300AACFA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFD3F301BF1547D0093A03E /* BCGCluesManager.m in Sources */,
 				AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */,
+				AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */,
+				AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */,
 				AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */,
+				AFFD3F341BF158B40093A03E /* BCGCluesTableViewController.m in Sources */,
+				AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */,
 				AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */,
+				AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */,
+				AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */,
+				AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +479,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF2C0F021BE7CD7300AACFA6 /* Main.storyboard */ = {
+		AF05DCE71BEFB70500580752 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF2C0F031BE7CD7300AACFA6 /* Base */,
+				AF05DCE81BEFB70500580752 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */ = {
@@ -409,23 +581,33 @@
 		};
 		AF2C0F241BE7CD7300AACFA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconCityGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = stelmaszuk.BeaconCityGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AF2C0F251BE7CD7300AACFA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BeaconCityGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = stelmaszuk.BeaconCityGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -496,6 +678,7 @@
 				AF2C0F251BE7CD7300AACFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF2C0F261BE7CD7300AACFA6 /* Build configuration list for PBXNativeTarget "BeaconCityGameTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +687,7 @@
 				AF2C0F281BE7CD7300AACFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF2C0F291BE7CD7300AACFA6 /* Build configuration list for PBXNativeTarget "BeaconCityGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +696,7 @@
 				AF2C0F2B1BE7CD7300AACFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
