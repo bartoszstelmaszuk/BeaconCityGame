@@ -241,6 +241,80 @@
             </objects>
             <point key="canvasLocation" x="1379" y="418"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KRB-FP-pSd">
+            <objects>
+                <viewController id="4Tt-b7-gkI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Ec-RB-wlA"/>
+                        <viewControllerLayoutGuide type="bottom" id="2gt-Do-Qxg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p5F-4y-YML">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rd-en-sRJ">
+                                <rect key="frame" x="211" y="198.5" width="178" height="43"/>
+                                <color key="backgroundColor" red="0.95862809965125761" green="1" blue="0.76199879921911073" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="1oo-sK-uI3"/>
+                                    <constraint firstAttribute="height" constant="43" id="kk9-9S-tTX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                                <state key="normal" title="NEW GAME"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHL-NT-2q1">
+                                <rect key="frame" x="211" y="278.5" width="178" height="43"/>
+                                <color key="backgroundColor" red="0.95862809969999996" green="1" blue="0.76199879920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="QRK-o7-ZeP"/>
+                                    <constraint firstAttribute="height" constant="43" id="QzN-TD-7cO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                                <state key="normal" title="OPTIONS"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWp-up-xWK">
+                                <rect key="frame" x="211" y="358.5" width="178" height="43"/>
+                                <color key="backgroundColor" red="0.95862809969999996" green="1" blue="0.76199879920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="3kP-JL-QX6"/>
+                                    <constraint firstAttribute="height" constant="43" id="eC6-xO-wHf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
+                                <state key="normal" title="EXIT"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon City Game!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-M7-p1C">
+                                <rect key="frame" x="178" y="57" width="244" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="DIH-Xs-d56"/>
+                                    <constraint firstAttribute="width" constant="244" id="HGm-64-A1j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70963539650442786" green="1" blue="0.48357193219858519" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gGM-M7-p1C" firstAttribute="centerX" secondItem="p5F-4y-YML" secondAttribute="centerX" id="A0R-Y7-RLp"/>
+                            <constraint firstItem="5Rd-en-sRJ" firstAttribute="centerX" secondItem="p5F-4y-YML" secondAttribute="centerX" id="HWa-0i-n1o"/>
+                            <constraint firstItem="gGM-M7-p1C" firstAttribute="top" secondItem="9Ec-RB-wlA" secondAttribute="bottom" constant="37" id="I4e-6y-f7j"/>
+                            <constraint firstItem="CHL-NT-2q1" firstAttribute="centerX" secondItem="p5F-4y-YML" secondAttribute="centerX" id="KgK-Ky-ZPX"/>
+                            <constraint firstItem="iWp-up-xWK" firstAttribute="top" secondItem="CHL-NT-2q1" secondAttribute="bottom" constant="37" id="Xvo-oZ-18n"/>
+                            <constraint firstItem="CHL-NT-2q1" firstAttribute="top" secondItem="5Rd-en-sRJ" secondAttribute="bottom" constant="37" id="cWB-L4-Mw5"/>
+                            <constraint firstItem="iWp-up-xWK" firstAttribute="centerX" secondItem="p5F-4y-YML" secondAttribute="centerX" id="gsu-wq-Xb7"/>
+                            <constraint firstItem="CHL-NT-2q1" firstAttribute="centerY" secondItem="p5F-4y-YML" secondAttribute="centerY" id="hcs-o1-CWc"/>
+                            <constraint firstItem="5Rd-en-sRJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gGM-M7-p1C" secondAttribute="bottom" constant="36" id="lMF-gF-Ejp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DP8-er-xsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="1175"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Odm-x8-NRQ">
             <objects>

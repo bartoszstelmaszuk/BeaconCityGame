@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "BCGBeaconRadiostation.h"
 
 @interface AppDelegate ()
 
+@property BCGBeaconRadiostation *radiostation;
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.radiostation = [[BCGBeaconRadiostation alloc] init];
+    
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
     }

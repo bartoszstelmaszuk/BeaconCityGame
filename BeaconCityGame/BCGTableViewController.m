@@ -12,6 +12,8 @@
 #import "BCGClueEditionTableViewController.h"
 #import <ESTBeaconManager.h>
 
+static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
+
 @interface BCGTableViewController () <BCGTableViewDataSourceDelegate>
 
 @property (strong, nonatomic) BCGTableViewDataSource *dataSource;
@@ -53,6 +55,17 @@
 - (IBAction)backTouchButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)unregisterForNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self.dataSource name:kDidRangeBeacons object:nil];
+}
+
+
+-(void)viewDidUnload
+{
+    [self unregisterForNotifications];
 }
 
 /*

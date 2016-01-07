@@ -12,11 +12,10 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "BCGCluesManager.h"
 
+static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
+
 @interface BCGTableViewDataSource () <ESTBeaconManagerDelegate>
 
-@property (strong, nonatomic) CLBeacon *beacon;
-@property (strong, nonatomic) ESTBeaconManager *beaconManager;
-@property (strong, nonatomic) CLBeaconRegion *beaconRegion;
 @property (strong, nonatomic) NSArray<CLBeacon *> *beacons;
 
 @end
@@ -28,56 +27,17 @@
     self = [super init];
     if (self) {
         
-        NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
-        
-        self.beacons = [NSArray new];
-        self.beaconManager = [ESTBeaconManager new];
-        self.beaconManager.delegate = self;
-        
-        self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                               identifier:@"MyIdentifier"];
-        self.beaconRegion.notifyOnEntry = YES;
-        self.beaconRegion.notifyOnExit = YES;
-        
-        [self.beaconManager startMonitoringForRegion:self.beaconRegion];
-        
-        [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
-        
-        [self.beaconManager requestAlwaysAuthorization];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didRangeBeacons:)
+                                                     name:kDidRangeBeacons
+                                                   object:NULL];
     }
     return self;
 }
 
-- (void)beaconManager:(id)manager monitoringDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
+- (void)didRangeBeacons:(NSNotification *)notification
 {
-    NSLog(@"Region Did Fail: Manager:%@ Region: %@ Error:%@", manager, region, error);
-}
-
-- (void)beaconManager:(id)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
-{
-    NSLog(@"status:%d", status);
-}
-
--(void)beaconManager:(id)manager didEnterRegion:(CLBeaconRegion *)region
-{
-    UILocalNotification *notification = [UILocalNotification new];
-    notification.alertBody = @"You've done it!";
-    notification.soundName = @"Default.mp3";
-    NSLog(@"You've entered");
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
-
-- (void)beaconManager:(id)manager didExitRegion:(CLBeaconRegion *)region
-{
-    UILocalNotification *notification = [UILocalNotification new];
-    notification.alertBody = @"You've exited!";
-    notification.soundName = @"Default.mp3";
-    NSLog(@"You've exited");
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
-
-- (void)beaconManager:(id)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region
-{
+    NSArray *beacons = [notification.userInfo objectForKey:@"Beacons"];
     NSMutableArray *temp = [NSMutableArray array];
     if (beacons.count > 0) {
         for (CLBeacon *beacon in beacons) {
@@ -103,6 +63,7 @@
             return @"Unknown";
     }
 }
+
 
 #pragma mark - Table view data source
 
