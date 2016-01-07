@@ -35,11 +35,6 @@
     [self.clueDescription addTarget:self action:@selector(clueDescriptionTextFieldChanged:) forControlEvents:UIControlEventEditingChanged];
 }
 
-//- (void)setBeacon:(CLBeacon *)beacon
-//{
-//    self.beacon = beacon;
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -61,6 +56,8 @@
     BCGClue *clue = [[BCGClue alloc] initWithBeacon:self.beacon clueDescription:self.clueDescription.text];
     
     [[BCGCluesManager sharedManager] addNextClue:clue];
+    
+    [self.view endEditing:YES];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
