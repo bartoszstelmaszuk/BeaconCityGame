@@ -15,10 +15,12 @@
 
 @end
 
-@interface BCGTableViewDataSource : NSObject <UITableViewDataSource>
+@interface BCGTableViewDataSource : NSObject <UITableViewDataSource, ESTBeaconManagerDelegate>
 
 @property (nonatomic, strong) id<BCGTableViewDataSourceDelegate> delegate;
+@property (strong, nonatomic) NSArray<CLBeacon *> *beacons;
 
 - (CLBeacon *)getBeaconAtIndexPath:(NSIndexPath *) indexPath;
+- (void)didRangeBeacons:(NSNotification *)notification;
 
 @end

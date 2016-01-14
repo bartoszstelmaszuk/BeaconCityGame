@@ -64,4 +64,15 @@
     
     return contains;
 }
+
+- (void)removeObjectAtIndex:(NSUInteger)index
+{
+    [self.sharedCluesArray removeObjectAtIndex:index];
+}
+
+- (void)insertObject:(BCGClue *)clue atIndex:(NSUInteger)index
+{
+    [self.sharedCluesArray insertObject:clue atIndex:index];
+}
+
 @end

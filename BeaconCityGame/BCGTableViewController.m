@@ -11,6 +11,7 @@
 #import "BCGClueTableViewCell.h"
 #import "BCGTableViewDataSource.h"
 #import "BCGClueEditionTableViewController.h"
+#import "BCGCluesManager.h"
 #import <EstimoteSDK/ESTBeaconManager.h>
 
 static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
@@ -18,6 +19,7 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 @interface BCGTableViewController () <BCGTableViewDataSourceDelegate>
 
 @property (strong, nonatomic) BCGTableViewDataSource *dataSource;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *reorderCluesButton;
 
 @end
 
@@ -37,6 +39,11 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
     [self.tableView registerNib:[UINib nibWithNibName:@"BCGBeaconTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGBeaconTableViewCell"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BCGClueTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGClueTableViewCell"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self.tableView.dataSource
+                                             selector:@selector(didRangeBeacons:)
+                                                 name:kDidRangeBeacons
+                                               object:nil];
 }
 
 - (void)reloadTableView
@@ -51,11 +58,39 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"BeaconSelection" sender:self];
+    if (indexPath.section == 0) {
+        [self performSegueWithIdentifier:@"BeaconSelection" sender:self];
+    }
 }
+
 - (IBAction)backTouchButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)editTouchButton:(id)sender {
+    if(self.editing)
+    {
+        [super setEditing:NO animated:NO];
+        [self.tableView setEditing:NO animated:NO];
+        [self.tableView reloadData];
+        self.reorderCluesButton.title = @"Reorder Clues";
+    }
+    else
+    {
+        [super setEditing:YES animated:YES];
+        [self.tableView setEditing:YES animated:YES];
+        [self.tableView reloadData];
+        self.reorderCluesButton.title = @"Done";
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleNone;
+}
+
+- (BOOL)tableView:(UITableView *)tableview shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
 }
 
 -(void)unregisterForNotifications
@@ -63,45 +98,21 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
     [[NSNotificationCenter defaultCenter] removeObserver:self.dataSource name:kDidRangeBeacons object:nil];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0 && [self.dataSource.beacons count] == 0) {
+        return 0;
+    } else if (section == 1 && [[BCGCluesManager sharedManager] numberOfClues] == 0) {
+        return 0;
+    }
+    
+    return 25.f;
+}
 
 -(void)viewDidUnload
 {
     [self unregisterForNotifications];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation

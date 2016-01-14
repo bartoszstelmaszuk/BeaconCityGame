@@ -15,26 +15,7 @@
 
 static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 
-@interface BCGTableViewDataSource () <ESTBeaconManagerDelegate>
-
-@property (strong, nonatomic) NSArray<CLBeacon *> *beacons;
-
-@end
-
 @implementation BCGTableViewDataSource
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(didRangeBeacons:)
-                                                     name:kDidRangeBeacons
-                                                   object:NULL];
-    }
-    return self;
-}
 
 - (void)didRangeBeacons:(NSNotification *)notification
 {
@@ -111,6 +92,7 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
         case 1:
         {
             BCGClueTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGClueTableViewCell"];
+            cell.showsReorderControl = YES;
             
             BCGClue *clue = [[BCGCluesManager sharedManager] clueAtIndex:indexPath.row];
             
@@ -122,6 +104,29 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
         default:
             return nil;
     }
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    if (sourceIndexPath.section == proposedDestinationIndexPath.section) {
+        return proposedDestinationIndexPath;
+    }
+    return sourceIndexPath;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    BCGClue *clue = [[BCGCluesManager sharedManager] clueAtIndex:fromIndexPath.row];
+    [[BCGCluesManager sharedManager] removeObjectAtIndex:fromIndexPath.row];
+    [[BCGCluesManager sharedManager] insertObject:clue atIndex:toIndexPath.row];
+}
+
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 - (CLBeacon *)getBeaconAtIndexPath:(NSIndexPath *)indexPath

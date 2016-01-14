@@ -37,8 +37,14 @@
                                 <action selector="backTouchButton:" destination="P5m-XL-S1W" id="e2q-YO-1FA"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reorder Clues" id="Dm2-I8-Im0">
+                            <connections>
+                                <action selector="editTouchButton:" destination="P5m-XL-S1W" id="DhV-C2-1zI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reorderCluesButton" destination="Dm2-I8-Im0" id="Osu-Z0-wgF"/>
                         <segue destination="PYH-uu-byy" kind="show" identifier="BeaconSelection" id="x09-cX-JJY"/>
                     </connections>
                 </tableViewController>
@@ -159,41 +165,6 @@
             </objects>
             <point key="canvasLocation" x="2054" y="411"/>
         </scene>
-        <!--Clues Table View Controller-->
-        <scene sceneID="upl-hG-6vx">
-            <objects>
-                <tableViewController id="1AQ-64-KDE" customClass="BCGCluesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Tk-sB-bLv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BCGClueTableViewCell" id="5gd-Wi-yr9">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5gd-Wi-yr9" id="Pog-ox-1PK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1AQ-64-KDE" id="FbV-9l-dwA"/>
-                            <outlet property="delegate" destination="1AQ-64-KDE" id="dzB-rL-iHJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Ybd-vw-28q">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="99X-9T-BEw">
-                            <connections>
-                                <action selector="backTouchButton:" destination="1AQ-64-KDE" id="xpU-jb-n3Y"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SIY-oS-v7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2866" y="1210"/>
-        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="cQP-Ea-wl7">
             <objects>
@@ -279,24 +250,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T39-sT-70y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1303" y="411"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Odm-x8-NRQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LFz-Yo-y0I" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAf-h7-cwW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="1AQ-64-KDE" kind="relationship" relationship="rootViewController" id="t66-Cb-XFY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xph-cn-cGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2054" y="1210"/>
         </scene>
     </scenes>
 </document>
