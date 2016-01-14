@@ -1,0 +1,6 @@
+framework module Pods_BeaconCityGame {
+  umbrella header "Pods-BeaconCityGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

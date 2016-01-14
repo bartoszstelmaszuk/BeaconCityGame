@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ESTBeaconManager.h>
+#import <EstimoteSDK/ESTBeaconManager.h>
 
 @interface BCGClueEditionTableViewController : UITableViewController
 

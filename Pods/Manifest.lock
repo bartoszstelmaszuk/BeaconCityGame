@@ -1,10 +1,13 @@
 PODS:
+  - CCMRadarView (1.0.2)
   - EstimoteSDK (3.7.1)
 
 DEPENDENCIES:
+  - CCMRadarView
   - EstimoteSDK (~> 3.7)
 
 SPEC CHECKSUMS:
+  CCMRadarView: 6bff4c5c3d05d627664a4b398a508d051a4a94be
   EstimoteSDK: 15d4cf50a4a1e41dcbb0c3cefd43207bed990d53
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

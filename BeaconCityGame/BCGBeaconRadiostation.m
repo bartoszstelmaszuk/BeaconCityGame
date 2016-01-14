@@ -11,6 +11,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
+static const NSString *kDidExitBeacon = @"kDidExitBeacon";
 
 @interface BCGBeaconRadiostation() <ESTBeaconManagerDelegate>
 
@@ -63,6 +64,9 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 
 - (void)beaconManager:(id)manager didExitRegion:(CLBeaconRegion *)region
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidExitBeacon
+                                                        object:NULL
+                                                      userInfo:NULL];
     NSLog(@"You've exited");
 }
 

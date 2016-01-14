@@ -10,7 +10,7 @@
 #import "BCGBeaconTableViewCell.h"
 #import "BCGTableViewDataSource.h"
 #import "BCGClueEditionTableViewController.h"
-#import <ESTBeaconManager.h>
+#import <EstimoteSDK/ESTBeaconManager.h>
 
 static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 

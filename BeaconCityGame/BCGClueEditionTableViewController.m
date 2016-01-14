@@ -59,11 +59,11 @@
     
     [self.view endEditing:YES];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:TRUE];
 }
 - (IBAction)cancelTouchButton:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:TRUE];
 }
 
 #pragma mark - Table view data source

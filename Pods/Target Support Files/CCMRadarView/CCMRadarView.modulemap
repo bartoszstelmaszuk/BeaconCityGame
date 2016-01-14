@@ -1,0 +1,6 @@
+framework module CCMRadarView {
+  umbrella header "CCMRadarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06D5814AC672AB413353C4EF /* libPods-BeaconCityGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */; };
 		846FB95E1C387F18002E8EC0 /* BCGBeaconRadiostation.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */; };
+		846FB9611C440549002E8EC0 /* BCGWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */; };
 		AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */; };
 		AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF05DCE71BEFB70500580752 /* Main.storyboard */; };
 		AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */; };
@@ -29,6 +29,7 @@
 		AFFD3F341BF158B40093A03E /* BCGCluesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F331BF158B40093A03E /* BCGCluesTableViewController.m */; };
 		AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFD3F361BF1595F0093A03E /* BCGClueTableViewCell.m */; };
 		AFFD3F391BF1595F0093A03E /* BCGClueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFD3F371BF1595F0093A03E /* BCGClueTableViewCell.xib */; };
+		F9A2B4B87D0E6A66EB798365 /* Pods_BeaconCityGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8F32146360A64A47B7BD86 /* Pods_BeaconCityGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeaconCityGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4488E1534FC1021ECA8BD28F /* Pods-BeaconCityGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.release.xcconfig"; sourceTree = "<group>"; };
+		5C8F32146360A64A47B7BD86 /* Pods_BeaconCityGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconCityGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846FB95C1C387F18002E8EC0 /* BCGBeaconRadiostation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGBeaconRadiostation.h; sourceTree = "<group>"; };
 		846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGBeaconRadiostation.m; sourceTree = "<group>"; };
+		846FB95F1C440549002E8EC0 /* BCGWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGWelcomeViewController.h; sourceTree = "<group>"; };
+		846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGWelcomeViewController.m; sourceTree = "<group>"; };
 		AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.debug.xcconfig"; sourceTree = "<group>"; };
 		AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewDataSource.h; sourceTree = "<group>"; };
 		AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewDataSource.m; sourceTree = "<group>"; };
@@ -102,7 +105,7 @@
 			files = (
 				AF2C0F2F1BE7D30100AACFA6 /* CoreLocation.framework in Frameworks */,
 				AF2C0F2D1BE7D2F800AACFA6 /* CoreBluetooth.framework in Frameworks */,
-				06D5814AC672AB413353C4EF /* libPods-BeaconCityGame.a in Frameworks */,
+				F9A2B4B87D0E6A66EB798365 /* Pods_BeaconCityGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +179,8 @@
 				AFFD3F311BF154850093A03E /* Clues */,
 				AF05DCE61BED77F700580752 /* BeaconTableView */,
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
+				846FB95F1C440549002E8EC0 /* BCGWelcomeViewController.h */,
+				846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
 				AF05DCE71BEFB70500580752 /* Main.storyboard */,
 				846FB95C1C387F18002E8EC0 /* BCGBeaconRadiostation.h */,
@@ -222,7 +227,7 @@
 				AF2C0F301BE7D30900AACFA6 /* CoreGraphics.framework */,
 				AF2C0F2E1BE7D30100AACFA6 /* CoreLocation.framework */,
 				AF2C0F2C1BE7D2F800AACFA6 /* CoreBluetooth.framework */,
-				20951A8F95FC1EE588BF9C3D /* libPods-BeaconCityGame.a */,
+				5C8F32146360A64A47B7BD86 /* Pods_BeaconCityGame.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				AF2C0EF31BE7CD7300AACFA6 /* Frameworks */,
 				AF2C0EF41BE7CD7300AACFA6 /* Resources */,
 				59691155793E79E1DCC46F88 /* Copy Pods Resources */,
+				AF337FF3F5A6F79191CFEBE2 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,6 +437,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF337FF3F5A6F79191CFEBE2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -450,6 +471,7 @@
 				AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */,
 				AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */,
 				AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */,
+				846FB9611C440549002E8EC0 /* BCGWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

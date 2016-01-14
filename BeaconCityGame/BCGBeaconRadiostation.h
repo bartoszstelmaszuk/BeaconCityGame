@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ESTBeaconManager.h>
+#import <EstimoteSDK/ESTBeaconManager.h>
 
 @interface BCGBeaconRadiostation : NSObject
 
