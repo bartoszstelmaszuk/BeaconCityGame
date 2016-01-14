@@ -8,6 +8,7 @@
 
 #import "BCGTableViewDataSource.h"
 #import "BCGBeaconTableViewCell.h"
+#import "BCGClueTableViewCell.h"
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "BCGCluesManager.h"
@@ -69,26 +70,58 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.beacons ? 1 : 0;
+    return self.beacons ? 2 : 0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"Beacons";
+    } else {
+        return @"Clues";
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.beacons ? self.beacons.count : 0;
+    if (section == 0) {
+        return self.beacons ? self.beacons.count : 0;
+    } else {
+        return [BCGCluesManager sharedManager]  ? [[BCGCluesManager sharedManager] numberOfClues] : 0;
+    }
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BCGBeaconTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGBeaconTableViewCell"];
-    
-    CLBeacon *beacon = [self.beacons objectAtIndex:indexPath.row];
-    
-    cell.proximityLabel.text = [self textForProximity:beacon.proximity];
-    cell.majorLabel.text = [NSString stringWithFormat:@"%@", beacon.major];
-    cell.minorLabel.text = [NSString stringWithFormat:@"%@", beacon.minor];
-    
-    return cell;
+    switch (indexPath.section) {
+        case 0:
+        {
+            BCGBeaconTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGBeaconTableViewCell"];
+            
+            CLBeacon *beacon = [self.beacons objectAtIndex:indexPath.row];
+            
+            cell.proximityLabel.text = [self textForProximity:beacon.proximity];
+            cell.majorLabel.text = [NSString stringWithFormat:@"%@", beacon.major];
+            cell.minorLabel.text = [NSString stringWithFormat:@"%@", beacon.minor];
+            
+            return cell;
+        }
+        case 1:
+        {
+            BCGClueTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BCGClueTableViewCell"];
+            
+            BCGClue *clue = [[BCGCluesManager sharedManager] clueAtIndex:indexPath.row];
+            
+            cell.majorLabel.text = [NSString stringWithFormat:@"%@", clue.beacon.major];
+            cell.minorLabel.text = [NSString stringWithFormat:@"%@", clue.beacon.minor];
+            cell.clueDescriptionLabel.text = clue.clueDescription;
+            return cell;
+        }
+        default:
+            return nil;
+    }
 }
 
 - (CLBeacon *)getBeaconAtIndexPath:(NSIndexPath *)indexPath

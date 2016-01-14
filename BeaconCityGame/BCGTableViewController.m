@@ -8,6 +8,7 @@
 
 #import "BCGTableViewController.h"
 #import "BCGBeaconTableViewCell.h"
+#import "BCGClueTableViewCell.h"
 #import "BCGTableViewDataSource.h"
 #import "BCGClueEditionTableViewController.h"
 #import <EstimoteSDK/ESTBeaconManager.h>
@@ -17,7 +18,7 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 @interface BCGTableViewController () <BCGTableViewDataSourceDelegate>
 
 @property (strong, nonatomic) BCGTableViewDataSource *dataSource;
-@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+
 @end
 
 @implementation BCGTableViewController
@@ -32,9 +33,10 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
     self.tableView.delegate = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44;
-    self.selectedIndexPath = [NSIndexPath new];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BCGBeaconTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGBeaconTableViewCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BCGClueTableViewCell" bundle:nil] forCellReuseIdentifier:@"BCGClueTableViewCell"];
 }
 
 - (void)reloadTableView
@@ -49,7 +51,6 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedIndexPath = indexPath;
     [self performSegueWithIdentifier:@"BeaconSelection" sender:self];
 }
 - (IBAction)backTouchButton:(id)sender
