@@ -1,13 +1,16 @@
 PODS:
   - CCMRadarView (1.0.2)
   - EstimoteSDK (3.7.1)
+  - RESideMenu (4.0.7)
 
 DEPENDENCIES:
   - CCMRadarView
   - EstimoteSDK (~> 3.7)
+  - RESideMenu (~> 4.0)
 
 SPEC CHECKSUMS:
   CCMRadarView: 6bff4c5c3d05d627664a4b398a508d051a4a94be
   EstimoteSDK: 15d4cf50a4a1e41dcbb0c3cefd43207bed990d53
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
 COCOAPODS: 0.39.0

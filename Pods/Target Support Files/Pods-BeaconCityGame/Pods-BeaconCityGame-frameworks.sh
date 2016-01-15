@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BeaconCityGame/CCMRadarView.framework"
+  install_framework "Pods-BeaconCityGame/RESideMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BeaconCityGame/CCMRadarView.framework"
+  install_framework "Pods-BeaconCityGame/RESideMenu.framework"
 fi

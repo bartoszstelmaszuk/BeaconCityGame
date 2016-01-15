@@ -4,6 +4,7 @@ use_frameworks!
 target 'BeaconCityGame' do
 	pod 'EstimoteSDK', '~> 3.7'
 	pod "CCMRadarView"
+	pod 'RESideMenu', '~> 4.0'
 end
 
 target 'BeaconCityGameTests' do
