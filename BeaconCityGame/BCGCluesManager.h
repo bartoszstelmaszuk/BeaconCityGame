@@ -18,5 +18,6 @@
 -(BOOL)containsBeacon:(CLBeacon *)beacon;
 -(void)removeObjectAtIndex:(NSUInteger)index;
 -(void)insertObject:(BCGClue *)clue atIndex:(NSUInteger)index;
+-(void)resetClues;
 
 @end

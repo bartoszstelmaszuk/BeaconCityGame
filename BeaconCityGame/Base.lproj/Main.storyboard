@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Tk-7T-bXh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bU1-bt-93L">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -11,7 +11,7 @@
         <!--Table View Controller-->
         <scene sceneID="wlu-YE-sGD">
             <objects>
-                <tableViewController id="P5m-XL-S1W" customClass="BCGTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="firstViewController" id="P5m-XL-S1W" customClass="BCGTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2F-Lh-ygq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,9 +32,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="GW7-PK-YlF">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="H7W-5X-wj7">
+                        <barButtonItem key="leftBarButtonItem" title="Side Menu" id="H7W-5X-wj7">
                             <connections>
-                                <action selector="backTouchButton:" destination="P5m-XL-S1W" id="e2q-YO-1FA"/>
+                                <action selector="sideMenuTouchButton:" destination="P5m-XL-S1W" id="L5I-9Z-GJS"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Reorder Clues" id="Dm2-I8-Im0">
@@ -150,7 +150,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lXm-Xk-JVN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5L1-LI-Vlp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" id="5L1-LI-Vlp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x6w-JH-jWr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -164,6 +164,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4e-Tw-p37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2054" y="411"/>
+        </scene>
+        <!--Left Side Menu View Controller-->
+        <scene sceneID="WLD-gq-2v7">
+            <objects>
+                <viewController restorationIdentifier="leftMenuViewController" storyboardIdentifier="leftMenuViewController" id="Mg2-hd-m0u" customClass="BCGLeftSideMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6X1-Q7-62J"/>
+                        <viewControllerLayoutGuide type="bottom" id="OZP-Sx-eCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FZd-zE-VY9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ax1-bJ-eR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="1129"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="02Q-as-Kjd">
+            <objects>
+                <viewController storyboardIdentifier="rootController" id="bU1-bt-93L" customClass="BCGRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k4H-xQ-5kR"/>
+                        <viewControllerLayoutGuide type="bottom" id="tTQ-3P-GhH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iUM-dZ-jmw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDH-Fi-vUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276" y="398"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="cQP-Ea-wl7">
@@ -212,7 +248,7 @@
                                     <constraint firstAttribute="height" constant="40" id="ziG-cH-cAZ"/>
                                 </constraints>
                                 <state key="normal" title="Start Game">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startGameTouchButton:" destination="6Tk-7T-bXh" eventType="touchUpInside" id="cQa-uo-01m"/>
@@ -244,12 +280,11 @@
                         <outlet property="beaconInformationLabel" destination="7Z3-vW-dUJ" id="rSy-BG-8Qd"/>
                         <outlet property="radar" destination="CXL-IE-uZv" id="8t6-Em-WxZ"/>
                         <outlet property="startGameButton" destination="Zcn-0k-lNs" id="IXQ-qE-uWu"/>
-                        <segue destination="5L1-LI-Vlp" kind="show" identifier="ShowBeacons" id="ZBa-Fw-l8D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T39-sT-70y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1303" y="411"/>
+            <point key="canvasLocation" x="1295" y="1051"/>
         </scene>
     </scenes>
 </document>

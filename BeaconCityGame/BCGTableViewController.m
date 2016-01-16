@@ -13,6 +13,8 @@
 #import "BCGClueEditionTableViewController.h"
 #import "BCGCluesManager.h"
 #import <EstimoteSDK/ESTBeaconManager.h>
+#import <RESideMenu/UIViewController+RESideMenu.h>
+#import "RESideMenu.h"
 
 static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 
@@ -63,9 +65,8 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
     }
 }
 
-- (IBAction)backTouchButton:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)sideMenuTouchButton:(id)sender {
+    [self.sideMenuViewController presentLeftMenuViewController];
 }
 
 - (IBAction)editTouchButton:(id)sender {

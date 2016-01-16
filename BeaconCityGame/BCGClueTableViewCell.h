@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *minorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *majorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *clueDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ClueNumber;
 
 @end

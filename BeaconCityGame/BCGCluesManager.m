@@ -75,4 +75,9 @@
     [self.sharedCluesArray insertObject:clue atIndex:index];
 }
 
+-(void)resetClues
+{
+    [self.sharedCluesArray removeAllObjects];
+}
+
 @end
