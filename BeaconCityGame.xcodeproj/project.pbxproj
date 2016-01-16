@@ -11,13 +11,13 @@
 		846FB9611C440549002E8EC0 /* BCGWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */; };
 		84D36D7E1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */; };
 		84D36D811C49B39F002BE72D /* BCGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36D801C49B39F002BE72D /* BCGRootViewController.m */; };
+		84D36D831C49C87A002BE72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D36D821C49C87A002BE72D /* Assets.xcassets */; };
 		AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */; };
 		AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF05DCE71BEFB70500580752 /* Main.storyboard */; };
 		AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */; };
 		AF2C0EFB1BE7CD7300AACFA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0EFA1BE7CD7300AACFA6 /* main.m */; };
 		AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */; };
 		AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F001BE7CD7300AACFA6 /* ViewController.m */; };
-		AF2C0F061BE7CD7300AACFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */; };
 		AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */; };
 		AF2C0F141BE7CD7300AACFA6 /* BeaconCityGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F131BE7CD7300AACFA6 /* BeaconCityGameTests.m */; };
 		AF2C0F1F1BE7CD7300AACFA6 /* BeaconCityGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0F1E1BE7CD7300AACFA6 /* BeaconCityGameUITests.m */; };
@@ -61,6 +61,7 @@
 		84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGLeftSideMenuViewController.m; sourceTree = "<group>"; };
 		84D36D7F1C49B39F002BE72D /* BCGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGRootViewController.h; sourceTree = "<group>"; };
 		84D36D801C49B39F002BE72D /* BCGRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGRootViewController.m; sourceTree = "<group>"; };
+		84D36D821C49C87A002BE72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.debug.xcconfig"; sourceTree = "<group>"; };
 		AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewDataSource.h; sourceTree = "<group>"; };
 		AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewDataSource.m; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AF2C0F001BE7CD7300AACFA6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF2C0F081BE7CD7300AACFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF2C0F0F1BE7CD7300AACFA6 /* BeaconCityGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconCityGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,9 +200,9 @@
 				846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
 				AF05DCE71BEFB70500580752 /* Main.storyboard */,
+				84D36D821C49C87A002BE72D /* Assets.xcassets */,
 				846FB95C1C387F18002E8EC0 /* BCGBeaconRadiostation.h */,
 				846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */,
-				AF2C0F051BE7CD7300AACFA6 /* Assets.xcassets */,
 				AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */,
 				AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */,
 				AF2C0EF91BE7CD7300AACFA6 /* Supporting Files */,
@@ -389,9 +389,9 @@
 			files = (
 				AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */,
 				AF2C0F091BE7CD7300AACFA6 /* LaunchScreen.storyboard in Resources */,
-				AF2C0F061BE7CD7300AACFA6 /* Assets.xcassets in Resources */,
 				AF5F76161BED07B800B45635 /* BCGBeaconTableViewCell.xib in Resources */,
 				AFFD3F391BF1595F0093A03E /* BCGClueTableViewCell.xib in Resources */,
+				84D36D831C49C87A002BE72D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

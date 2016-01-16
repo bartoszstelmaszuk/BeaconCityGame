@@ -30,7 +30,7 @@
     
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
-    //self.backgroundImage = [UIImage imageNamed:@"Stars"];
+    self.backgroundImage = [UIImage imageNamed:@"CityLights"];
     self.delegate = self;
 }
 
