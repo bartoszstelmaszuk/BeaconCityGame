@@ -10,8 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
-static const NSString *kDidExitBeacon = @"kDidExitBeacon";
+static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
+static NSString *const kDidExitBeacon = @"kDidExitBeacon";
 
 @interface BCGBeaconRadiostation() <ESTBeaconManagerDelegate>
 

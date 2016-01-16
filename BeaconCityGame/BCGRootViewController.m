@@ -27,6 +27,7 @@
     self.scaleBackgroundImageView = NO;
     self.panGestureEnabled = NO;
     self.interactivePopGestureRecognizerEnabled = NO;
+    self.parallaxEnabled = NO;
     
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];

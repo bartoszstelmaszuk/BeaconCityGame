@@ -16,12 +16,13 @@
 #import <RESideMenu/UIViewController+RESideMenu.h>
 #import "RESideMenu.h"
 
-static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
+static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
+static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
 
 @interface BCGTableViewController () <BCGTableViewDataSourceDelegate>
 
 @property (strong, nonatomic) BCGTableViewDataSource *dataSource;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *reorderCluesButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *startGameButton;
 
 @end
 
@@ -46,6 +47,11 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
                                              selector:@selector(didRangeBeacons:)
                                                  name:kDidRangeBeacons
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(enterEditingMode:)
+                                                 name:kEnteredEditingMode
+                                               object:nil];
 }
 
 - (void)reloadTableView
@@ -65,26 +71,28 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
     }
 }
 
-- (IBAction)sideMenuTouchButton:(id)sender {
-    [self.sideMenuViewController presentLeftMenuViewController];
+- (void)enterEditingMode:(NSNotification *)notification
+{
+    [super setEditing:YES animated:YES];
+    [self.tableView setEditing:YES animated:YES];
+    [self.tableView reloadData];
+    self.startGameButton.title = @"Done";
 }
-
-- (IBAction)editTouchButton:(id)sender {
+- (IBAction)startGameEditingMode:(id)sender
+{
     if(self.editing)
     {
         [super setEditing:NO animated:NO];
         [self.tableView setEditing:NO animated:NO];
         [self.tableView reloadData];
-        self.reorderCluesButton.title = @"Reorder Clues";
-    }
-    else
-    {
-        [super setEditing:YES animated:YES];
-        [self.tableView setEditing:YES animated:YES];
-        [self.tableView reloadData];
-        self.reorderCluesButton.title = @"Done";
+        self.startGameButton.title = @"Start Game";
     }
 }
+
+- (IBAction)sideMenuTouchButton:(id)sender {
+    [self.sideMenuViewController presentLeftMenuViewController];
+}
+
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewCellEditingStyleNone;
@@ -97,6 +105,7 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
 -(void)unregisterForNotifications
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self.dataSource name:kDidRangeBeacons object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kEnteredEditingMode object:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

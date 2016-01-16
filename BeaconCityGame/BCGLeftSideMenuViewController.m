@@ -9,6 +9,8 @@
 #import "BCGLeftSideMenuViewController.h"
 #import "BCGCluesManager.h"
 
+static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
+
 @interface BCGLeftSideMenuViewController ()
 
 @property (strong, readwrite, nonatomic) UITableView *tableView;
@@ -33,12 +35,8 @@
         tableView.scrollsToTop = NO;
         tableView;
     });
-    [self.view addSubview:self.tableView];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark UITableView Delegate
@@ -48,12 +46,15 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 0:
-            [[BCGCluesManager sharedManager] resetClues];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kEnteredEditingMode object:nil];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 1:
-//        TODO: menuViewController
-
+            [[BCGCluesManager sharedManager] resetClues];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"ShowDelayTime" sender:nil];
             [self.sideMenuViewController hideMenuViewController];
             break;
         default:
@@ -61,8 +62,7 @@
     }
 }
 
-#pragma mark -
-#pragma mark UITableView Datasource
+#pragma mark - UITableView Datasource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -76,7 +76,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,14 +87,14 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.backgroundColor = [UIColor clearColor];
+        cell.backgroundColor = [UIColor lightGrayColor];
         cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
         cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
+        cell.textLabel.highlightedTextColor = [UIColor whiteColor];
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    NSArray *titles = @[@"Reset Clues", @"Options"];
+    NSArray *titles = @[@"Reorder Clues", @"Reset Clues", @"Delay Time"];
     //NSArray *images = @[@"IconHome", @"IconCalendar", @"IconProfile", @"IconSettings", @"IconEmpty"];
     cell.textLabel.text = titles[indexPath.row];
     //cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];

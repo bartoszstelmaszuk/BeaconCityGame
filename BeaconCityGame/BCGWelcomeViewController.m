@@ -9,7 +9,7 @@
 #import "BCGWelcomeViewController.h"
 #import <CCMRadarView/CCMRadarView-Swift.h>
 
-static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
+static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
 
 @interface BCGWelcomeViewController ()
 

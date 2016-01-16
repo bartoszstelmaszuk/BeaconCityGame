@@ -37,20 +37,21 @@
                                 <action selector="sideMenuTouchButton:" destination="P5m-XL-S1W" id="L5I-9Z-GJS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Reorder Clues" id="Dm2-I8-Im0">
+                        <barButtonItem key="rightBarButtonItem" title="Start Game" id="Dm2-I8-Im0">
                             <connections>
-                                <action selector="editTouchButton:" destination="P5m-XL-S1W" id="DhV-C2-1zI"/>
+                                <action selector="startGameEditingMode:" destination="P5m-XL-S1W" id="k1o-HD-EIv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="reorderCluesButton" destination="Dm2-I8-Im0" id="Osu-Z0-wgF"/>
+                        <outlet property="startGameButton" destination="Dm2-I8-Im0" id="1tw-4A-ZSX"/>
+                        <outlet property="tableView" destination="j2F-Lh-ygq" id="2Wa-Or-7dj"/>
                         <segue destination="PYH-uu-byy" kind="show" identifier="BeaconSelection" id="x09-cX-JJY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctg-BK-75v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2866" y="411"/>
+            <point key="canvasLocation" x="2836" y="383"/>
         </scene>
         <!--Add Clue-->
         <scene sceneID="yoj-Ut-MgP">
@@ -178,10 +179,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="9TF-ee-NoG" kind="showDetail" identifier="ShowDelayTime" action="showViewController:sender:" id="xW8-AJ-A4E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ax1-bJ-eR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2054" y="1129"/>
+        </scene>
+        <!--Delay Time Picker View Controller-->
+        <scene sceneID="klj-MI-MLR">
+            <objects>
+                <viewController storyboardIdentifier="secondViewController" id="9TF-ee-NoG" customClass="BCGDelayTimePickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7oD-ce-dsU"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Wl-li-RTd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aRn-hk-ucu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-a8-g1J">
+                                <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                <date key="date" timeIntervalSinceReferenceDate="474667144.797773">
+                                    <!--2016-01-16 19:59:04 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="pickerAction:" destination="9TF-ee-NoG" eventType="valueChanged" id="vCd-bd-6sK"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-OZ-ys4">
+                                <rect key="frame" x="268.5" y="460" width="63" height="31"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="bLU-Tw-R2U"/>
+                                    <constraint firstAttribute="width" constant="63" id="yed-ji-cNN"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneTouchButton:" destination="9TF-ee-NoG" eventType="touchUpInside" id="ZK5-JK-h0H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pzT-OZ-ys4" firstAttribute="top" secondItem="IO0-a8-g1J" secondAttribute="bottom" constant="60" id="0s0-qr-DPE"/>
+                            <constraint firstItem="IO0-a8-g1J" firstAttribute="centerY" secondItem="aRn-hk-ucu" secondAttribute="centerY" id="8VW-c7-1KT"/>
+                            <constraint firstItem="IO0-a8-g1J" firstAttribute="height" secondItem="aRn-hk-ucu" secondAttribute="height" multiplier="1/3" id="9Vf-Wf-Y1J"/>
+                            <constraint firstItem="IO0-a8-g1J" firstAttribute="leading" secondItem="aRn-hk-ucu" secondAttribute="leading" id="IjU-Ri-haJ"/>
+                            <constraint firstItem="IO0-a8-g1J" firstAttribute="centerX" secondItem="aRn-hk-ucu" secondAttribute="centerX" id="Iza-3h-SoG"/>
+                            <constraint firstItem="pzT-OZ-ys4" firstAttribute="centerX" secondItem="aRn-hk-ucu" secondAttribute="centerX" id="MwK-pz-NRe"/>
+                            <constraint firstAttribute="trailing" secondItem="IO0-a8-g1J" secondAttribute="trailing" id="Z9Q-er-Kwn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UYF-9A-MCe"/>
+                    <connections>
+                        <outlet property="delayTimePicker" destination="IO0-a8-g1J" id="2ae-eO-Ufa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Io-A4-coR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2894" y="1129"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="02Q-as-Kjd">

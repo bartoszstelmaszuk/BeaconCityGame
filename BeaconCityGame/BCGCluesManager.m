@@ -11,6 +11,7 @@
 @interface BCGCluesManager ()
 
 @property (nonatomic, strong) NSMutableArray *sharedCluesArray;
+@property (nonatomic) NSInteger delayTime; //in sec
 
 @end
 
@@ -32,6 +33,7 @@
     
     if (self) {
         self.sharedCluesArray = [NSMutableArray array];
+        self.delayTime = 60;
     }
     
     return self;
@@ -78,6 +80,11 @@
 -(void)resetClues
 {
     [self.sharedCluesArray removeAllObjects];
+}
+
+-(void)setGameDelayTime:(NSInteger)delayTime
+{
+    self.delayTime = delayTime;
 }
 
 @end

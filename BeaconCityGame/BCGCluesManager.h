@@ -19,5 +19,6 @@
 -(void)removeObjectAtIndex:(NSUInteger)index;
 -(void)insertObject:(BCGClue *)clue atIndex:(NSUInteger)index;
 -(void)resetClues;
+-(void)setGameDelayTime:(NSInteger)delayTime;
 
 @end
