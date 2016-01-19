@@ -5,6 +5,8 @@ target 'BeaconCityGame' do
 	pod 'EstimoteSDK', '~> 3.7'
 	pod "CCMRadarView"
 	pod 'RESideMenu', '~> 4.0'
+	pod 'SFRoundProgressCounterView'
+	pod 'iCarousel', '~> 1.8'
 end
 
 target 'BeaconCityGameTests' do

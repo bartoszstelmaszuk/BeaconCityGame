@@ -1,0 +1,6 @@
+framework module SFRoundProgressCounterView {
+  umbrella header "SFRoundProgressCounterView-umbrella.h"
+
+  export *
+  module * { export * }
+}
