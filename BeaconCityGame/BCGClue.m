@@ -26,4 +26,14 @@
     return self;
 }
 
+- (BOOL)isEqual:(id)object
+{
+    BCGClue *clue = object;
+    if ([self.beacon.major isEqual:clue.beacon.major] && [self.beacon.minor isEqual:clue.beacon.minor]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 @end

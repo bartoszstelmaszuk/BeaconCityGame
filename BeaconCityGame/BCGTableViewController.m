@@ -86,6 +86,18 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
         [self.tableView setEditing:NO animated:NO];
         [self.tableView reloadData];
         self.startGameButton.title = @"Start Game";
+    } else if (!self.editing && [[BCGCluesManager sharedManager] numberOfClues] >= 2) {
+        [self performSegueWithIdentifier:@"MoveToDelayTimeController" sender:nil];
+    } else if (!self.editing && [[BCGCluesManager sharedManager] numberOfClues] < 2) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Couldn't start the game"
+                                                                       message:@"You have too few clues to start a game!"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 

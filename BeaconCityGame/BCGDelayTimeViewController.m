@@ -8,6 +8,7 @@
 
 #import "BCGDelayTimeViewController.h"
 #import <JWGCircleCounter/JWGCircleCounter.h>
+#import "BCGCluesManager.h"
 
 @interface BCGDelayTimeViewController () <JWGCircleCounterDelegate>
 
@@ -34,17 +35,12 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.circleCounter startWithSeconds:8];
+    [self.circleCounter startWithSeconds:[[BCGCluesManager sharedManager] getDelayTime]];
 }
 
 - (void)circleCounterTimeDidExpire:(JWGCircleCounter *)circleCounter {
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Timer Expired"
-                                                        message:nil
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    [alertView show];
+    [self performSegueWithIdentifier:@"ShowGame" sender:nil];
 }
 
 /*

@@ -33,7 +33,7 @@
     
     if (self) {
         self.sharedCluesArray = [NSMutableArray array];
-        self.delayTime = 60;
+        self.delayTime = 10;
     }
     
     return self;
@@ -85,6 +85,11 @@
 -(void)setGameDelayTime:(NSInteger)delayTime
 {
     self.delayTime = delayTime;
+}
+
+-(NSInteger)getDelayTime
+{
+    return self.delayTime;
 }
 
 @end

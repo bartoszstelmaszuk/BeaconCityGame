@@ -20,5 +20,6 @@
 -(void)insertObject:(BCGClue *)clue atIndex:(NSUInteger)index;
 -(void)resetClues;
 -(void)setGameDelayTime:(NSInteger)delayTime;
+-(NSInteger)getDelayTime;
 
 @end

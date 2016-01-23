@@ -15,4 +15,5 @@
 @property (nonatomic, strong) NSString *clueDescription;
 
 - (instancetype)initWithBeacon:(CLBeacon *)beacon clueDescription:(NSString *)clueDescription;
+- (BOOL)isEqual:(id)object;
 @end

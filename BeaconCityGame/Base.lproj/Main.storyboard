@@ -40,7 +40,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Start Game" id="Dm2-I8-Im0">
                             <connections>
                                 <action selector="startGameEditingMode:" destination="P5m-XL-S1W" id="k1o-HD-EIv"/>
-                                <segue destination="e8F-j2-wAW" kind="show" id="967-5m-AQe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -48,6 +47,7 @@
                         <outlet property="startGameButton" destination="Dm2-I8-Im0" id="1tw-4A-ZSX"/>
                         <outlet property="tableView" destination="j2F-Lh-ygq" id="2Wa-Or-7dj"/>
                         <segue destination="PYH-uu-byy" kind="show" identifier="BeaconSelection" id="x09-cX-JJY"/>
+                        <segue destination="e8F-j2-wAW" kind="show" identifier="MoveToDelayTimeController" id="Cqe-J6-r59"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctg-BK-75v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +89,7 @@
                     <connections>
                         <outlet property="circleCounter" destination="DRi-Gu-URU" id="arh-8h-HOT"/>
                         <outlet property="delayTimeView" destination="6fu-nO-swJ" id="kcp-lL-573"/>
+                        <segue destination="6Tk-7T-bXh" kind="show" identifier="ShowGame" id="LWd-V4-EbG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEY-Ak-mAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="1276" y="398"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="cQP-Ea-wl7">
             <objects>
-                <viewController id="6Tk-7T-bXh" customClass="BCGWelcomeViewController" sceneMemberID="viewController">
+                <viewController id="6Tk-7T-bXh" customClass="BCGGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9BX-em-CaP"/>
                         <viewControllerLayoutGuide type="bottom" id="VdG-WC-Hnv"/>
@@ -315,7 +316,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-IE-uZv" customClass="CCMRadarView" customModule="CCMRadarView">
+                            <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-IE-uZv" customClass="CCMRadarView" customModule="CCMRadarView">
                                 <rect key="frame" x="90" y="30" width="401" height="348"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -334,7 +335,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-vW-dUJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-vW-dUJ">
                                 <rect key="frame" x="79" y="420" width="460" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="j1d-3R-3TT"/>
@@ -343,34 +344,17 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcn-0k-lNs">
-                                <rect key="frame" x="229" y="530" width="142" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ziG-cH-cAZ"/>
-                                </constraints>
-                                <state key="normal" title="Start Game">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startGameTouchButton:" destination="6Tk-7T-bXh" eventType="touchUpInside" id="cQa-uo-01m"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.62376560717428375" green="0.52104503933486401" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="centerX" secondItem="X4F-Kj-t85" secondAttribute="centerX" id="8bb-TP-cl6"/>
-                            <constraint firstItem="VdG-WC-Hnv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Zcn-0k-lNs" secondAttribute="bottom" constant="70" id="B5g-y3-zDr"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="width" secondItem="X4F-Kj-t85" secondAttribute="width" multiplier="0.7" id="Fmm-sa-QeI"/>
                             <constraint firstItem="7Z3-vW-dUJ" firstAttribute="top" secondItem="CXL-IE-uZv" secondAttribute="bottom" constant="90" id="M4f-de-yHx"/>
-                            <constraint firstItem="Zcn-0k-lNs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Z3-vW-dUJ" secondAttribute="bottom" constant="40" id="OvL-Fx-Zus"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="top" secondItem="9BX-em-CaP" secondAttribute="bottom" constant="25" id="avT-qU-1sO"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="top" secondItem="9BX-em-CaP" secondAttribute="bottom" id="fMS-dS-mOh"/>
-                            <constraint firstItem="Zcn-0k-lNs" firstAttribute="centerX" secondItem="X4F-Kj-t85" secondAttribute="centerX" id="gDd-Nb-erY"/>
                             <constraint firstItem="7Z3-vW-dUJ" firstAttribute="leading" secondItem="X4F-Kj-t85" secondAttribute="leadingMargin" constant="20" id="gnb-Ks-fyq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Z3-vW-dUJ" secondAttribute="trailing" constant="20" id="jEN-O0-BEf"/>
-                            <constraint firstItem="Zcn-0k-lNs" firstAttribute="width" secondItem="X4F-Kj-t85" secondAttribute="width" multiplier="1/4" id="sET-5z-cWk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -379,14 +363,13 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="beaconInformationLabel" destination="7Z3-vW-dUJ" id="rSy-BG-8Qd"/>
-                        <outlet property="radar" destination="CXL-IE-uZv" id="8t6-Em-WxZ"/>
-                        <outlet property="startGameButton" destination="Zcn-0k-lNs" id="IXQ-qE-uWu"/>
+                        <outlet property="beaconInformationLabel" destination="7Z3-vW-dUJ" id="Rxs-Xc-EcD"/>
+                        <outlet property="radar" destination="CXL-IE-uZv" id="EMB-ns-Brr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T39-sT-70y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551" y="1209"/>
+            <point key="canvasLocation" x="4365" y="411"/>
         </scene>
     </scenes>
 </document>

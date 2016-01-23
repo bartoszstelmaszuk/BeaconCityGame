@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		846FB95E1C387F18002E8EC0 /* BCGBeaconRadiostation.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */; };
-		846FB9611C440549002E8EC0 /* BCGWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */; };
 		84D36D7E1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */; };
 		84D36D811C49B39F002BE72D /* BCGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36D801C49B39F002BE72D /* BCGRootViewController.m */; };
 		84D36D831C49C87A002BE72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D36D821C49C87A002BE72D /* Assets.xcassets */; };
 		84D36DD21C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DD11C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m */; };
 		84D36DD81C52C1E4002BE72D /* BCGDelayTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */; };
+		84D36DDD1C539CDC002BE72D /* BCGGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */; };
 		AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */; };
 		AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF05DCE71BEFB70500580752 /* Main.storyboard */; };
 		AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */; };
@@ -57,8 +57,6 @@
 		5C8F32146360A64A47B7BD86 /* Pods_BeaconCityGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconCityGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846FB95C1C387F18002E8EC0 /* BCGBeaconRadiostation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGBeaconRadiostation.h; sourceTree = "<group>"; };
 		846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGBeaconRadiostation.m; sourceTree = "<group>"; };
-		846FB95F1C440549002E8EC0 /* BCGWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGWelcomeViewController.h; sourceTree = "<group>"; };
-		846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGWelcomeViewController.m; sourceTree = "<group>"; };
 		84D36D7C1C49ABB4002BE72D /* BCGLeftSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGLeftSideMenuViewController.h; sourceTree = "<group>"; };
 		84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGLeftSideMenuViewController.m; sourceTree = "<group>"; };
 		84D36D7F1C49B39F002BE72D /* BCGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGRootViewController.h; sourceTree = "<group>"; };
@@ -68,6 +66,8 @@
 		84D36DD11C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGDelayTimePickerViewController.m; sourceTree = "<group>"; };
 		84D36DD61C52C1E4002BE72D /* BCGDelayTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGDelayTimeViewController.h; sourceTree = "<group>"; };
 		84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGDelayTimeViewController.m; sourceTree = "<group>"; };
+		84D36DDB1C539CDC002BE72D /* BCGGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGGameViewController.h; sourceTree = "<group>"; };
+		84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGGameViewController.m; sourceTree = "<group>"; };
 		AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.debug.xcconfig"; sourceTree = "<group>"; };
 		AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewDataSource.h; sourceTree = "<group>"; };
 		AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewDataSource.m; sourceTree = "<group>"; };
@@ -154,15 +154,37 @@
 			name = ClueCell;
 			sourceTree = "<group>";
 		};
-		AF05DCE61BED77F700580752 /* BeaconTableView */ = {
+		84D36DD91C539C2A002BE72D /* SideMenu Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84D36D7C1C49ABB4002BE72D /* BCGLeftSideMenuViewController.h */,
+				84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */,
+				84D36D7F1C49B39F002BE72D /* BCGRootViewController.h */,
+				84D36D801C49B39F002BE72D /* BCGRootViewController.m */,
+			);
+			name = "SideMenu Controllers";
+			sourceTree = "<group>";
+		};
+		84D36DDA1C539C77002BE72D /* DelayTimeMenu Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84D36DD01C4AD7BA002BE72D /* BCGDelayTimePickerViewController.h */,
+				84D36DD11C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m */,
+			);
+			name = "DelayTimeMenu Controller";
+			sourceTree = "<group>";
+		};
+		AF05DCE61BED77F700580752 /* MainTableView */ = {
+			isa = PBXGroup;
+			children = (
+				846FB9621C481EA8002E8EC0 /* ClueCell */,
+				AFFD3F2A1BF14D460093A03E /* BeaconCell */,
 				AFED11AF1BED0C43009B3EC8 /* BCGTableViewController.h */,
 				AFED11B01BED0C43009B3EC8 /* BCGTableViewController.m */,
 				AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */,
 				AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */,
 			);
-			name = BeaconTableView;
+			name = MainTableView;
 			sourceTree = "<group>";
 		};
 		AF2C0EED1BE7CD7300AACFA6 = {
@@ -192,30 +214,24 @@
 			children = (
 				AF2C0EFC1BE7CD7300AACFA6 /* AppDelegate.h */,
 				AF2C0EFD1BE7CD7300AACFA6 /* AppDelegate.m */,
-				84D36D7C1C49ABB4002BE72D /* BCGLeftSideMenuViewController.h */,
-				84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */,
-				84D36D7F1C49B39F002BE72D /* BCGRootViewController.h */,
-				84D36D801C49B39F002BE72D /* BCGRootViewController.m */,
-				84D36DD01C4AD7BA002BE72D /* BCGDelayTimePickerViewController.h */,
-				84D36DD11C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m */,
-				AFFD3F3B1BF168C30093A03E /* BeaconEditionIntoClue */,
-				AFFD3F311BF154850093A03E /* Clues */,
-				846FB9621C481EA8002E8EC0 /* ClueCell */,
-				AFFD3F2A1BF14D460093A03E /* BeaconCell */,
-				AF05DCE61BED77F700580752 /* BeaconTableView */,
-				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
-				846FB95F1C440549002E8EC0 /* BCGWelcomeViewController.h */,
-				846FB9601C440549002E8EC0 /* BCGWelcomeViewController.m */,
-				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
-				AF05DCE71BEFB70500580752 /* Main.storyboard */,
-				84D36D821C49C87A002BE72D /* Assets.xcassets */,
 				846FB95C1C387F18002E8EC0 /* BCGBeaconRadiostation.h */,
 				846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */,
+				84D36DD91C539C2A002BE72D /* SideMenu Controllers */,
+				84D36DDA1C539C77002BE72D /* DelayTimeMenu Controller */,
+				AFFD3F3B1BF168C30093A03E /* BeaconEditionIntoClue */,
+				AFFD3F311BF154850093A03E /* Clues */,
+				AF05DCE61BED77F700580752 /* MainTableView */,
+				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
+				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
+				84D36DDB1C539CDC002BE72D /* BCGGameViewController.h */,
+				84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */,
+				84D36DD61C52C1E4002BE72D /* BCGDelayTimeViewController.h */,
+				84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */,
+				AF05DCE71BEFB70500580752 /* Main.storyboard */,
+				84D36D821C49C87A002BE72D /* Assets.xcassets */,
 				AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */,
 				AF2C0F0A1BE7CD7300AACFA6 /* Info.plist */,
 				AF2C0EF91BE7CD7300AACFA6 /* Supporting Files */,
-				84D36DD61C52C1E4002BE72D /* BCGDelayTimeViewController.h */,
-				84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */,
 			);
 			path = BeaconCityGame;
 			sourceTree = "<group>";
@@ -480,6 +496,7 @@
 				84D36DD21C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m in Sources */,
 				AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */,
 				AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */,
+				84D36DDD1C539CDC002BE72D /* BCGGameViewController.m in Sources */,
 				84D36D7E1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m in Sources */,
 				AF2C0EFE1BE7CD7300AACFA6 /* AppDelegate.m in Sources */,
 				AF5F76151BED07B800B45635 /* BCGBeaconTableViewCell.m in Sources */,
@@ -489,7 +506,6 @@
 				AFFD3F381BF1595F0093A03E /* BCGClueTableViewCell.m in Sources */,
 				84D36D811C49B39F002BE72D /* BCGRootViewController.m in Sources */,
 				AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */,
-				846FB9611C440549002E8EC0 /* BCGWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
