@@ -33,7 +33,7 @@
     
     if (self) {
         self.sharedCluesArray = [NSMutableArray array];
-        self.delayTime = 10;
+        self.delayTime = 2;
     }
     
     return self;

@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -316,8 +315,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-IE-uZv" customClass="CCMRadarView" customModule="CCMRadarView">
-                                <rect key="frame" x="90" y="30" width="401" height="348"/>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-IE-uZv" customClass="CCMRadarView" customModule="CCMRadarView">
+                                <rect key="frame" x="90" y="89" width="420" height="420"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -335,26 +334,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-vW-dUJ">
-                                <rect key="frame" x="79" y="420" width="460" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-vW-dUJ">
+                                <rect key="frame" x="222.5" y="519" width="155" height="69"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Cjt-Ns-4N4"/>
                                     <constraint firstAttribute="height" constant="70" id="j1d-3R-3TT"/>
+                                    <constraint firstAttribute="height" constant="69" id="trP-62-mS1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="j1d-3R-3TT"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.62376560717428375" green="0.52104503933486401" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="7Z3-vW-dUJ" firstAttribute="top" secondItem="CXL-IE-uZv" secondAttribute="bottom" constant="10" id="4xe-cm-XE9"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="centerX" secondItem="X4F-Kj-t85" secondAttribute="centerX" id="8bb-TP-cl6"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="width" secondItem="X4F-Kj-t85" secondAttribute="width" multiplier="0.7" id="Fmm-sa-QeI"/>
-                            <constraint firstItem="7Z3-vW-dUJ" firstAttribute="top" secondItem="CXL-IE-uZv" secondAttribute="bottom" constant="90" id="M4f-de-yHx"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="top" secondItem="9BX-em-CaP" secondAttribute="bottom" constant="25" id="avT-qU-1sO"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="top" secondItem="9BX-em-CaP" secondAttribute="bottom" id="fMS-dS-mOh"/>
-                            <constraint firstItem="7Z3-vW-dUJ" firstAttribute="leading" secondItem="X4F-Kj-t85" secondAttribute="leadingMargin" constant="20" id="gnb-Ks-fyq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Z3-vW-dUJ" secondAttribute="trailing" constant="20" id="jEN-O0-BEf"/>
+                            <constraint firstItem="7Z3-vW-dUJ" firstAttribute="centerX" secondItem="X4F-Kj-t85" secondAttribute="centerX" id="lMQ-RJ-AVx"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -363,7 +368,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="beaconInformationLabel" destination="7Z3-vW-dUJ" id="Rxs-Xc-EcD"/>
+                        <outlet property="beaconInformationLabel" destination="7Z3-vW-dUJ" id="48s-WF-aGP"/>
                         <outlet property="radar" destination="CXL-IE-uZv" id="EMB-ns-Brr"/>
                     </connections>
                 </viewController>
