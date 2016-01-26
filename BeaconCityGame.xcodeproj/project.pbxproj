@@ -14,6 +14,7 @@
 		84D36DD21C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DD11C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m */; };
 		84D36DD81C52C1E4002BE72D /* BCGDelayTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */; };
 		84D36DDD1C539CDC002BE72D /* BCGGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */; };
+		84D36DE01C581320002BE72D /* BCGiCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36DDF1C581320002BE72D /* BCGiCarouselViewController.m */; };
 		AF05DCE51BED749300580752 /* BCGTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */; };
 		AF05DCE91BEFB70500580752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF05DCE71BEFB70500580752 /* Main.storyboard */; };
 		AF05DCEC1BEFB8A100580752 /* BCGClueEditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05DCEB1BEFB8A100580752 /* BCGClueEditionTableViewController.m */; };
@@ -68,6 +69,8 @@
 		84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGDelayTimeViewController.m; sourceTree = "<group>"; };
 		84D36DDB1C539CDC002BE72D /* BCGGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGGameViewController.h; sourceTree = "<group>"; };
 		84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGGameViewController.m; sourceTree = "<group>"; };
+		84D36DDE1C581320002BE72D /* BCGiCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGiCarouselViewController.h; sourceTree = "<group>"; };
+		84D36DDF1C581320002BE72D /* BCGiCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGiCarouselViewController.m; sourceTree = "<group>"; };
 		AB495C6181FF2E9708408CD3 /* Pods-BeaconCityGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCityGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCityGame/Pods-BeaconCityGame.debug.xcconfig"; sourceTree = "<group>"; };
 		AF05DCE31BED749300580752 /* BCGTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGTableViewDataSource.h; sourceTree = "<group>"; };
 		AF05DCE41BED749300580752 /* BCGTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGTableViewDataSource.m; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				AF05DCE61BED77F700580752 /* MainTableView */,
 				AF2C0EFF1BE7CD7300AACFA6 /* ViewController.h */,
 				AF2C0F001BE7CD7300AACFA6 /* ViewController.m */,
+				84D36DDE1C581320002BE72D /* BCGiCarouselViewController.h */,
+				84D36DDF1C581320002BE72D /* BCGiCarouselViewController.m */,
 				84D36DDB1C539CDC002BE72D /* BCGGameViewController.h */,
 				84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */,
 				84D36DD61C52C1E4002BE72D /* BCGDelayTimeViewController.h */,
@@ -493,6 +498,7 @@
 				84D36DD81C52C1E4002BE72D /* BCGDelayTimeViewController.m in Sources */,
 				AFFD3F301BF1547D0093A03E /* BCGCluesManager.m in Sources */,
 				AF2C0F011BE7CD7300AACFA6 /* ViewController.m in Sources */,
+				84D36DE01C581320002BE72D /* BCGiCarouselViewController.m in Sources */,
 				84D36DD21C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m in Sources */,
 				AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */,
 				AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */,

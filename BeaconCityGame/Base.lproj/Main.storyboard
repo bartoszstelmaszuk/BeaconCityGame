@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bU1-bt-93L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bU1-bt-93L">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -333,7 +333,16 @@
                                         <color key="value" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="67" y="89" width="186" height="186"/>
+                                </variation>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08s-tf-iVk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="eZz-Lo-8Av" kind="embed" id="J2n-Gq-e28"/>
+                                </connections>
+                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-vW-dUJ">
                                 <rect key="frame" x="222.5" y="519" width="155" height="69"/>
                                 <constraints>
@@ -349,32 +358,121 @@
                                         <exclude reference="j1d-3R-3TT"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="82" y="285" width="155" height="69"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.62376560717428375" green="0.52104503933486401" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="08s-tf-iVk" secondAttribute="trailing" id="1XM-QV-0Yp"/>
                             <constraint firstItem="7Z3-vW-dUJ" firstAttribute="top" secondItem="CXL-IE-uZv" secondAttribute="bottom" constant="10" id="4xe-cm-XE9"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="centerX" secondItem="X4F-Kj-t85" secondAttribute="centerX" id="8bb-TP-cl6"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="width" secondItem="X4F-Kj-t85" secondAttribute="width" multiplier="0.7" id="Fmm-sa-QeI"/>
+                            <constraint firstItem="VdG-WC-Hnv" firstAttribute="top" secondItem="08s-tf-iVk" secondAttribute="bottom" id="TLF-bm-gtq"/>
+                            <constraint firstItem="08s-tf-iVk" firstAttribute="height" secondItem="X4F-Kj-t85" secondAttribute="height" multiplier="1/3" id="Ydo-wJ-zFv"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="top" secondItem="9BX-em-CaP" secondAttribute="bottom" constant="25" id="avT-qU-1sO"/>
+                            <constraint firstItem="08s-tf-iVk" firstAttribute="top" relation="lessThanOrEqual" secondItem="7Z3-vW-dUJ" secondAttribute="bottom" constant="25" id="ehi-JV-6eX"/>
                             <constraint firstItem="CXL-IE-uZv" firstAttribute="top" secondItem="9BX-em-CaP" secondAttribute="bottom" id="fMS-dS-mOh"/>
+                            <constraint firstItem="08s-tf-iVk" firstAttribute="leading" secondItem="X4F-Kj-t85" secondAttribute="leading" id="gGY-2K-1WP"/>
                             <constraint firstItem="7Z3-vW-dUJ" firstAttribute="centerX" secondItem="X4F-Kj-t85" secondAttribute="centerX" id="lMQ-RJ-AVx"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="08s-tf-iVk"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="1XM-QV-0Yp"/>
+                                <exclude reference="Ydo-wJ-zFv"/>
+                                <exclude reference="ehi-JV-6eX"/>
+                                <exclude reference="gGY-2K-1WP"/>
                                 <exclude reference="fMS-dS-mOh"/>
+                                <exclude reference="TLF-bm-gtq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="08s-tf-iVk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1XM-QV-0Yp"/>
+                                <include reference="Ydo-wJ-zFv"/>
+                                <include reference="ehi-JV-6eX"/>
+                                <include reference="gGY-2K-1WP"/>
+                                <include reference="TLF-bm-gtq"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="beaconInformationLabel" destination="7Z3-vW-dUJ" id="48s-WF-aGP"/>
+                        <outlet property="carouselContainer" destination="08s-tf-iVk" id="ic6-US-jwv"/>
                         <outlet property="radar" destination="CXL-IE-uZv" id="EMB-ns-Brr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T39-sT-70y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4365" y="411"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="brS-9G-e1o">
+            <objects>
+                <viewController restorationIdentifier="iCarouselViewControllerID" storyboardIdentifier="iCarouselViewControllerID" id="eZz-Lo-8Av" customClass="BCGiCarouselViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BDt-BS-WW4"/>
+                        <viewControllerLayoutGuide type="bottom" id="UJA-Qc-zGW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8c7-gZ-7mc">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06l-Sw-lwE" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eZz-Lo-8Av" id="4Bx-gL-akc"/>
+                                    <outlet property="delegate" destination="eZz-Lo-8Av" id="esk-r5-6E4"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="06l-Sw-lwE" firstAttribute="leading" secondItem="8c7-gZ-7mc" secondAttribute="leading" id="MRs-dx-URQ"/>
+                            <constraint firstAttribute="trailing" secondItem="06l-Sw-lwE" secondAttribute="trailing" id="dZa-iN-Ce6"/>
+                            <constraint firstItem="UJA-Qc-zGW" firstAttribute="top" secondItem="06l-Sw-lwE" secondAttribute="bottom" id="jNo-Da-bcq"/>
+                            <constraint firstItem="06l-Sw-lwE" firstAttribute="top" secondItem="BDt-BS-WW4" secondAttribute="bottom" id="kjS-AI-hCR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="06l-Sw-lwE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MRs-dx-URQ"/>
+                                <exclude reference="dZa-iN-Ce6"/>
+                                <exclude reference="kjS-AI-hCR"/>
+                                <exclude reference="jNo-Da-bcq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="06l-Sw-lwE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MRs-dx-URQ"/>
+                                <include reference="dZa-iN-Ce6"/>
+                                <include reference="kjS-AI-hCR"/>
+                                <include reference="jNo-Da-bcq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="06l-Sw-lwE" id="tm1-vJ-yEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3GA-EY-bsQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4365" y="912.75"/>
         </scene>
     </scenes>
 </document>

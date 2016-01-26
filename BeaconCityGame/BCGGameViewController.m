@@ -10,11 +10,13 @@
 #import <CCMRadarView/CCMRadarView-Swift.h>
 #import "BCGClue.h"
 #import "BCGCluesManager.h"
+#import "BCGiCarouselViewController.h"
 
 static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
 
 @interface BCGGameViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *carouselContainer;
 @property (weak, nonatomic) IBOutlet CCMRadarView *radar;
 @property (weak, nonatomic) IBOutlet UILabel *beaconInformationLabel;
 @property (strong, nonatomic) NSArray *beacons;
@@ -38,6 +40,7 @@ static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
     
     
     self.beaconInformationLabel.text = [NSString stringWithFormat:@"No iBeacons around. Please collect them near phone"];
+    
 }
 
 - (void)didRangeBeacons:(NSNotification *)notification
