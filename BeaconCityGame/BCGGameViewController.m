@@ -13,6 +13,7 @@
 #import "BCGiCarouselViewController.h"
 
 static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
+static NSString *const kFoundNextClue = @"kFoundNextClue";
 
 @interface BCGGameViewController ()
 
@@ -40,6 +41,7 @@ static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
     
     
     self.beaconInformationLabel.text = [NSString stringWithFormat:@"No iBeacons around. Please collect them near phone"];
+    self.carouselContainer.hidden = YES;
     
 }
 
@@ -64,7 +66,18 @@ static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
                                                                   handler:^(UIAlertAction * action) {}];
             
             [alert addAction:defaultAction];
+            
             [self presentViewController:alert animated:YES completion:^{
+                NSDictionary *dict = @{@"Clue": clueToFind};
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:kFoundNextClue
+                                                                    object:NULL
+                                                                  userInfo:dict];
+                if (self.carouselContainer.isHidden) {
+                    [UIView animateWithDuration:0.5 animations:^{
+                        self.carouselContainer.hidden = NO;
+                    }];
+                }
                 self.nrOfClueToFind = self.nrOfClueToFind + 1;
                 if (![self.foundClues containsObject:clueToFind]) {
                     [self.foundClues addObject: clueToFind];
@@ -75,15 +88,28 @@ static NSString *const kDidRangeBeacons = @"kDidRangeBeacons";
         }
     }
     
-    if (self.nrOfClueToFind + 1 == [[BCGCluesManager sharedManager] numberOfClues]) {
-        //TODO: end game
+    [self.radar startAnimation];
+    
+    if ([self.foundClues count] == [[BCGCluesManager sharedManager] numberOfClues]) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Finished!"
+                                                                       message:[NSString stringWithFormat:@"Congratulations! You've found all clues!"]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  [self.navigationController popToRootViewControllerAnimated:YES];
+                                                              }];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:^{
+            [[BCGCluesManager sharedManager] resetClues];
+        }];
     }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.radar startAnimation];
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCGClue.h"
 
 @interface BCGiCarouselViewController : UIViewController
 

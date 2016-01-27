@@ -54,14 +54,15 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
                                                object:nil];
 }
 
-- (void)reloadTableView
+- (void)viewWillAppear:(BOOL)animated
 {
+    self.navigationController.navigationBarHidden = NO;
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)reloadTableView
+{
+    [self.tableView reloadData];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

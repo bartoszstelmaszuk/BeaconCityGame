@@ -46,7 +46,7 @@
 
 - (NSInteger)numberOfClues
 {
-    return self.sharedCluesArray.count;
+    return [self.sharedCluesArray count];
 }
 
 - (BCGClue *)clueAtIndex:(NSInteger)index
