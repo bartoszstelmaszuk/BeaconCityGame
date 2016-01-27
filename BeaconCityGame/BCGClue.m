@@ -26,6 +26,11 @@
     return self;
 }
 
+- (instancetype)initWithoutBeaconWithClueDescription:(NSString *)clueDescription
+{
+    return [self initWithBeacon:nil clueDescription:clueDescription];;
+}
+
 - (BOOL)isEqual:(id)object
 {
     BCGClue *clue = object;

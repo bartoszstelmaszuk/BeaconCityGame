@@ -41,8 +41,25 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
     
     
     self.beaconInformationLabel.text = [NSString stringWithFormat:@"Looking for clues."];
-    self.carouselContainer.hidden = YES;
     
+    self.carouselContainer.hidden = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    BCGClue *initialClue = [[BCGCluesManager sharedManager] clueAtIndex:0];
+    if (!initialClue.beacon) {
+        NSDictionary *dict = @{@"Clue": initialClue};
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:kFoundNextClue
+                                                            object:NULL
+                                                          userInfo:dict];
+        self.carouselContainer.hidden = NO;
+        [self.foundClues addObject:initialClue];
+        self.nrOfClueToFind = 1;
+    }
 }
 
 -(void)unregisterForNotifications
@@ -94,7 +111,7 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
                 }
             }];
         } else {
-            self.beaconInformationLabel.text = [NSString stringWithFormat:@"Found %d. Look for clues", self.nrOfClueToFind];
+            self.beaconInformationLabel.text = [NSString stringWithFormat:@"Looking for clues"];
         }
     }
     
