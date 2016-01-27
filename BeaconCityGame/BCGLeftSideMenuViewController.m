@@ -88,16 +88,16 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.highlightedTextColor = [UIColor whiteColor];
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
     NSArray *titles = @[@"Reorder Clues", @"Reset Clues", @"Delay Time"];
-    //NSArray *images = @[@"IconHome", @"IconCalendar", @"IconProfile", @"IconSettings", @"IconEmpty"];
+    NSArray *images = @[@"Drag Reorder-50", @"Restart-50", @"Time-50"];
     cell.textLabel.text = titles[indexPath.row];
-    //cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
     
     return cell;
 }
