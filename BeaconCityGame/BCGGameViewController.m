@@ -40,9 +40,19 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
                                                object:NULL];
     
     
-    self.beaconInformationLabel.text = [NSString stringWithFormat:@"No iBeacons around. Please collect them near phone"];
+    self.beaconInformationLabel.text = [NSString stringWithFormat:@"Looking for clues."];
     self.carouselContainer.hidden = YES;
     
+}
+
+-(void)unregisterForNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kDidRangeBeacons object:nil];
+}
+
+-(void)viewDidUnload
+{
+    [self unregisterForNotifications];
 }
 
 - (void)didRangeBeacons:(NSNotification *)notification
@@ -55,9 +65,9 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
     }
     
     for (CLBeacon *beacon in self.beacons) {
-        if ( [beacon.major isEqual: clueToFind.beacon.major] && [beacon.minor isEqual:clueToFind.beacon.minor] && beacon.proximity != CLProximityNear) {
+        if ( [beacon.major isEqual: clueToFind.beacon.major] && [beacon.minor isEqual:clueToFind.beacon.minor] && beacon.proximity != CLProximityNear && beacon.proximity != CLProximityImmediate) {
             self.beaconInformationLabel.text = [NSString stringWithFormat:@"You are close to find clue with nr: %ld", (long)self.nrOfClueToFind + 1];
-        } else if ( [beacon.major isEqual: clueToFind.beacon.major] && [beacon.minor isEqual:clueToFind.beacon.minor] && beacon.proximity == CLProximityNear) {
+        } else if ( [beacon.major isEqual: clueToFind.beacon.major] && [beacon.minor isEqual:clueToFind.beacon.minor] && (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate)) {
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Found Clue"
                                                                            message:[NSString stringWithFormat:@"Found clue with nr: %ld and description: %@", (long)self.nrOfClueToFind + 1, clueToFind.clueDescription]
                                                                     preferredStyle:UIAlertControllerStyleAlert];
@@ -84,7 +94,7 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
                 }
             }];
         } else {
-            self.beaconInformationLabel.text = [NSString stringWithFormat:@"Found %d. Look For Clues", self.nrOfClueToFind];
+            self.beaconInformationLabel.text = [NSString stringWithFormat:@"Found %d. Look for clues", self.nrOfClueToFind];
         }
     }
     

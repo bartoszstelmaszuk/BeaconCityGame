@@ -35,6 +35,16 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
                                                object:NULL];
 }
 
+-(void)unregisterForNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kFoundNextClue object:nil];
+}
+
+-(void)viewDidUnload
+{
+    [self unregisterForNotifications];
+}
+
 - (void)didFoundNextClue:(NSNotification *)notification;
 {
     BCGClue *clue = [notification.userInfo objectForKey:@"Clue"];
