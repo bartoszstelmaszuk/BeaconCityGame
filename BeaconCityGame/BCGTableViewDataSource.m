@@ -99,7 +99,7 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
             cell.majorLabel.text = [NSString stringWithFormat:@"%@", clue.beacon.major];
             cell.minorLabel.text = [NSString stringWithFormat:@"%@", clue.beacon.minor];
             cell.clueDescriptionLabel.text = clue.clueDescription;
-            cell.ClueNumber.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+            cell.ClueNumber.text = [NSString stringWithFormat:@"%ld", indexPath.row + 1];
             return cell;
         }
         default:

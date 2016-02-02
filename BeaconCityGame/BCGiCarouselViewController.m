@@ -94,7 +94,7 @@ static NSString *const kFoundNextClue = @"kFoundNextClue";
     }
     
     self.clueDescriptionLabel.text = [[self.foundClues objectAtIndex:carousel.currentItemIndex] clueDescription];
-    label.text = [NSString stringWithFormat:@"%d", index + 1];
+    label.text = [NSString stringWithFormat:@"%ld", index + 1];
     
     return view;
 }
