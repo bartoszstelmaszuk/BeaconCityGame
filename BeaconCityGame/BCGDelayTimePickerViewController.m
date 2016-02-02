@@ -33,10 +33,10 @@
     [dateFormatterHour setDateFormat:@"HH"];
     
     NSInteger hour = [[dateFormatterHour stringFromDate:self.delayTimePicker.date] integerValue];
-    NSLog(@"hour: %d", hour);
+    NSLog(@"hour: %ld", (long)hour);
     
     NSInteger minutes = [[dateFormatterMinutes stringFromDate:self.delayTimePicker.date] integerValue];
-    NSLog(@"minutes: %d", minutes);
+    NSLog(@"minutes: %ld", (long)minutes);
     
     NSInteger seconds = hour*60*60 + minutes*60;
     
@@ -44,26 +44,5 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (IBAction)pickerAction:(id)sender
-{
-
-//    [[BCGCluesManager sharedManager] setGameDelayTime:[[dateFormatter stringFromDate:self.delayTimePicker.date] integerValue]];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

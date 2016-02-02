@@ -1,6 +1,6 @@
 PODS:
   - CCMRadarView (1.0.2)
-  - EstimoteSDK (3.7.1)
+  - EstimoteSDK (3.8.2)
   - iCarousel (1.8.2)
   - JWGCircleCounter (0.2.2)
   - RESideMenu (4.0.7)
@@ -14,7 +14,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CCMRadarView: 6bff4c5c3d05d627664a4b398a508d051a4a94be
-  EstimoteSDK: 15d4cf50a4a1e41dcbb0c3cefd43207bed990d53
+  EstimoteSDK: 5e36b596f9f28161bff35b086d9f70282be5f513
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   JWGCircleCounter: 89e25c3d5e9eb41cf666a795427712bb5e52a1a1
   RESideMenu: f24c508404b49c667344c54aba7e590883533958

@@ -107,15 +107,6 @@ static const NSString *kDidRangeBeacons = @"kDidRangeBeacons";
     }
 }
 
-//- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
-//{
-//    if (sourceIndexPath.section == proposedDestinationIndexPath.section) {
-//        return proposedDestinationIndexPath;
-//    }
-//    return sourceIndexPath;
-//    return proposedDestinationIndexPath;
-//}
-
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     BCGClue *clue = [[BCGCluesManager sharedManager] clueAtIndex:fromIndexPath.row];
     [[BCGCluesManager sharedManager] removeObjectAtIndex:fromIndexPath.row];

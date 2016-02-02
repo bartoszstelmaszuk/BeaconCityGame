@@ -74,10 +74,23 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
 
 - (void)enterEditingMode:(NSNotification *)notification
 {
-    [super setEditing:YES animated:YES];
-    [self.tableView setEditing:YES animated:YES];
-    [self.tableView reloadData];
-    self.startGameButton.title = @"Done";
+    if ([[BCGCluesManager sharedManager] numberOfClues] < 2) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"No clues!"
+                                                                       message:@"There are no clues to reorder."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* action = [UIAlertAction actionWithTitle:@"OK"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:nil];
+        
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+    } else {
+        [super setEditing:YES animated:YES];
+        [self.tableView setEditing:YES animated:YES];
+        [self.tableView reloadData];
+        self.startGameButton.title = @"Done";
+    }
 }
 - (IBAction)startGameEditingMode:(id)sender
 {
@@ -156,7 +169,6 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"BeaconSelection"])
