@@ -1,8 +1,11 @@
 PODS:
+  - AFNetworking (1.3.4)
   - CCMRadarView (1.0.2)
   - EstimoteSDK (3.8.2)
   - iCarousel (1.8.2)
   - JWGCircleCounter (0.2.2)
+  - OpenWeatherMapAPI (0.0.5):
+    - AFNetworking (~> 1.3.1)
   - RESideMenu (4.0.7)
 
 DEPENDENCIES:
@@ -10,13 +13,16 @@ DEPENDENCIES:
   - EstimoteSDK (~> 3.7)
   - iCarousel (~> 1.8)
   - JWGCircleCounter
+  - OpenWeatherMapAPI (~> 0.0.4)
   - RESideMenu (~> 4.0)
 
 SPEC CHECKSUMS:
+  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   CCMRadarView: 6bff4c5c3d05d627664a4b398a508d051a4a94be
   EstimoteSDK: 5e36b596f9f28161bff35b086d9f70282be5f513
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   JWGCircleCounter: 89e25c3d5e9eb41cf666a795427712bb5e52a1a1
+  OpenWeatherMapAPI: 53613bba3dffc948f852a66a25f512f7a16643e7
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
 COCOAPODS: 0.39.0

@@ -36,5 +36,25 @@
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This application monitors your location to determine when you are near the beacons for the app</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>api.openweathermap.org</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+            <key>openweathermap.org</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

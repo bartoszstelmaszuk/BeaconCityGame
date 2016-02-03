@@ -84,14 +84,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-BeaconCityGame/AFNetworking.framework"
   install_framework "Pods-BeaconCityGame/CCMRadarView.framework"
   install_framework "Pods-BeaconCityGame/JWGCircleCounter.framework"
+  install_framework "Pods-BeaconCityGame/OpenWeatherMapAPI.framework"
   install_framework "Pods-BeaconCityGame/RESideMenu.framework"
   install_framework "Pods-BeaconCityGame/iCarousel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-BeaconCityGame/AFNetworking.framework"
   install_framework "Pods-BeaconCityGame/CCMRadarView.framework"
   install_framework "Pods-BeaconCityGame/JWGCircleCounter.framework"
+  install_framework "Pods-BeaconCityGame/OpenWeatherMapAPI.framework"
   install_framework "Pods-BeaconCityGame/RESideMenu.framework"
   install_framework "Pods-BeaconCityGame/iCarousel.framework"
 fi

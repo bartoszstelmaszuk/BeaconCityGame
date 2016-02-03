@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		84184C4F1C5927E8000D2D01 /* BCGLastClueEditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84184C4E1C5927E8000D2D01 /* BCGLastClueEditionTableViewController.m */; };
 		846FB95E1C387F18002E8EC0 /* BCGBeaconRadiostation.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */; };
+		84A2F5201C61582E0038D029 /* BCGWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2F51F1C61582E0038D029 /* BCGWeatherViewController.m */; };
+		84A2F5231C617EF80038D029 /* BCGWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2F5221C617EF80038D029 /* BCGWeatherModel.m */; };
 		84D36D7E1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */; };
 		84D36D811C49B39F002BE72D /* BCGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D36D801C49B39F002BE72D /* BCGRootViewController.m */; };
 		84D36D831C49C87A002BE72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D36D821C49C87A002BE72D /* Assets.xcassets */; };
@@ -60,6 +62,10 @@
 		84184C4E1C5927E8000D2D01 /* BCGLastClueEditionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGLastClueEditionTableViewController.m; sourceTree = "<group>"; };
 		846FB95C1C387F18002E8EC0 /* BCGBeaconRadiostation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGBeaconRadiostation.h; sourceTree = "<group>"; };
 		846FB95D1C387F18002E8EC0 /* BCGBeaconRadiostation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGBeaconRadiostation.m; sourceTree = "<group>"; };
+		84A2F51E1C61582E0038D029 /* BCGWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGWeatherViewController.h; sourceTree = "<group>"; };
+		84A2F51F1C61582E0038D029 /* BCGWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGWeatherViewController.m; sourceTree = "<group>"; };
+		84A2F5211C617EF80038D029 /* BCGWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGWeatherModel.h; sourceTree = "<group>"; };
+		84A2F5221C617EF80038D029 /* BCGWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGWeatherModel.m; sourceTree = "<group>"; };
 		84D36D7C1C49ABB4002BE72D /* BCGLeftSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGLeftSideMenuViewController.h; sourceTree = "<group>"; };
 		84D36D7D1C49ABB4002BE72D /* BCGLeftSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGLeftSideMenuViewController.m; sourceTree = "<group>"; };
 		84D36D7F1C49B39F002BE72D /* BCGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGRootViewController.h; sourceTree = "<group>"; };
@@ -157,6 +163,17 @@
 			name = ClueCell;
 			sourceTree = "<group>";
 		};
+		84A2F5241C61869B0038D029 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				84A2F5211C617EF80038D029 /* BCGWeatherModel.h */,
+				84A2F5221C617EF80038D029 /* BCGWeatherModel.m */,
+				84A2F51E1C61582E0038D029 /* BCGWeatherViewController.h */,
+				84A2F51F1C61582E0038D029 /* BCGWeatherViewController.m */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
 		84D36DD91C539C2A002BE72D /* SideMenu Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +247,7 @@
 				84D36DDC1C539CDC002BE72D /* BCGGameViewController.m */,
 				84D36DD61C52C1E4002BE72D /* BCGDelayTimeViewController.h */,
 				84D36DD71C52C1E4002BE72D /* BCGDelayTimeViewController.m */,
+				84A2F5241C61869B0038D029 /* Weather */,
 				AF05DCE71BEFB70500580752 /* Main.storyboard */,
 				84D36D821C49C87A002BE72D /* Assets.xcassets */,
 				AF2C0F071BE7CD7300AACFA6 /* LaunchScreen.storyboard */,
@@ -497,7 +515,9 @@
 			files = (
 				84D36DD81C52C1E4002BE72D /* BCGDelayTimeViewController.m in Sources */,
 				AFFD3F301BF1547D0093A03E /* BCGCluesManager.m in Sources */,
+				84A2F5201C61582E0038D029 /* BCGWeatherViewController.m in Sources */,
 				84D36DE01C581320002BE72D /* BCGiCarouselViewController.m in Sources */,
+				84A2F5231C617EF80038D029 /* BCGWeatherModel.m in Sources */,
 				84D36DD21C4AD7BA002BE72D /* BCGDelayTimePickerViewController.m in Sources */,
 				AFFD3F2D1BF14D760093A03E /* BCGClue.m in Sources */,
 				AFED11B11BED0C43009B3EC8 /* BCGTableViewController.m in Sources */,

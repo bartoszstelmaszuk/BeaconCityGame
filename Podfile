@@ -8,6 +8,7 @@ target 'BeaconCityGame' do
 	pod 'RESideMenu', '~> 4.0'
 	pod 'JWGCircleCounter'
 	pod 'iCarousel', '~> 1.8'
+	pod 'OpenWeatherMapAPI', '~> 0.0.4'
 end
 
 target 'BeaconCityGameTests' do

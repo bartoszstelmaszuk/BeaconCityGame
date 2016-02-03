@@ -14,6 +14,8 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
 @interface BCGLeftSideMenuViewController ()
 
 @property (strong, readwrite, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSArray *menuTitles;
+@property (strong, nonatomic) NSArray *menuImages;
 
 @end
 
@@ -22,6 +24,9 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.menuTitles = @[@"Reorder Clues", @"Reset Clues", @"Delay Time", @"Weather"];
+    self.menuImages =  @[@"Drag Reorder-50", @"Restart-50", @"Time-50", @"Umbrella Filled-50"];
+    
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, 54 * 5) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -57,6 +62,10 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
             [self performSegueWithIdentifier:@"ShowDelayTime" sender:nil];
             [self.sideMenuViewController hideMenuViewController];
             break;
+        case 3:
+            [self performSegueWithIdentifier:@"showWeather" sender:nil];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
         default:
             break;
     }
@@ -76,7 +85,7 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 3;
+    return [self.menuTitles count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -94,10 +103,8 @@ static NSString *const kEnteredEditingMode = @"kEnteredEditingMode";
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    NSArray *titles = @[@"Reorder Clues", @"Reset Clues", @"Delay Time"];
-    NSArray *images = @[@"Drag Reorder-50", @"Restart-50", @"Time-50"];
-    cell.textLabel.text = titles[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
+    cell.textLabel.text = self.menuTitles[indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:self.menuImages[indexPath.row]];
     
     return cell;
 }
